@@ -98,6 +98,7 @@ function Login(props) {
                   value={formValues.password}
                   onChange={handleChange}
                 />
+                <a href=""><i class="fa fa-eye-slash" aria-hidden="false"></i></a>
               </label>
               <p>{formErrors.password}</p>
               <label>Forget Password ?</label>

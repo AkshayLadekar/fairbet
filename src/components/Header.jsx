@@ -20,7 +20,6 @@ function Header() {
           </div>
           <a
             onClick={() => setModalShowLogin(true)}
-            href=""
             className="get-started-btn lloginBTn"
           >
             Login

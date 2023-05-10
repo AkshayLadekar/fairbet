@@ -1,0 +1,38 @@
+html.hydrated {
+  background: #ddd;
+}
+
+.bet-cent-btn-bx {
+  margin: 20px 0 0 7px;
+}
+
+.het-hist-bx {
+  background: #ddd;
+  margin-top: 3rem;
+  margin-bottom: 10px;
+}
+.btn {
+  border-radius: 3px;
+}
+
+.btn-gren {
+  background: #00b2ff;
+  color: #fff !important;
+}
+
+.my-bet-tabl thead {
+  background: #54555a;
+  color: #fff;
+  font-size: 15px;
+}
+
+.table-responsive {
+  display: block !important;
+  width: 100% !important;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+.bck {
+  background: #ddd;
+}

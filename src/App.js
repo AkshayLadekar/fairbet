@@ -12,7 +12,11 @@ import SignUp from "./components/SignUp";
 import Slots from "./components/Slots";
 import Home from "./components/Home";
 import Profile from "./components/Profile";
+import Satta from "./components/Satta";
 import Payment from "./components/Payment";
+import Ezugi from "./components/Ezugi";
+import Evolution from "./components/Evolution";
+import Feedback from "./components/Feedback";
 
 function App() {
   const result = useSelector((state) => state.cartData);
@@ -34,6 +38,10 @@ function App() {
           <Route path="/slots" element={<Slots />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/payment" element={<Payment />} />
+          <Route path="/satta" element={<Satta />} />
+          <Route path="/ezugi" element={<Ezugi />} />
+          <Route path="/evolution" element={<Evolution />} />
+          <Route path="/feedback" element={<Feedback />} />
         </Routes>
       </BrowserRouter>
     </>

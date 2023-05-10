@@ -2,7 +2,9 @@ import React from 'react'
 
 function Satta() {
   return (
-    <div>Satta</div>
+    <div>
+      <iframe src="https://nandi.live/" width="100%" frameborder="0" height="600px"></iframe>
+    </div>
   )
 }
 
