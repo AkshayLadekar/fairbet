@@ -1,0 +1,219 @@
+body {
+  background-color: #dddddd;
+}
+
+#header {
+  background: #fff;
+  transition: all 0.5s;
+  z-index: 997;
+  padding: 20px 0;
+}
+#header.header-scrolled {
+  padding: 20px 0;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+}
+.abtp {
+  margin-top: 8px;
+}
+.tps {
+  margin-top: 10px;
+}
+.inpl {
+  width: 20px;
+  height: auto;
+  margin-right: 7px;
+}
+#header .logo {
+  font-size: 30px;
+  margin: 0;
+  padding: 0;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+}
+#header .logo a {
+  color: #111111;
+}
+#header .logo a span {
+  color: #e03a3c;
+}
+#header .logo img {
+}
+.toggImg {
+  width: 20px;
+  height: auto;
+  margin-right: 5px;
+}
+#header .innrhd {
+  position: fixed;
+  z-index: 1000;
+  background-color: #191919;
+  width: 100%;
+  max-width: 100%;
+}
+
+.order-last {
+  order: 0 !important;
+}
+.sidenav a {
+  font-size: 14px;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 0px;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 15px;
+  text-decoration: none;
+  font-size: 14px;
+  color: #000;
+  display: block;
+  transition: 0.3s;
+  border-bottom: 1px solid #cfcfcf;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: -18px;
+  right: -2px;
+  font-size: 36px;
+  margin-left: 50px;
+  border-bottom: 0;
+}
+
+#main {
+  transition: margin-left 0.5s;
+  padding: 16px;
+  padding-top: 10px;
+  padding-left: 0px;
+  margin-top: -18px;
+  padding-top: 20px;
+  padding-right: 0;
+  padding-bottom: 0;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 14px;
+  }
+}
+@media (min-width: 576px) {
+  .container,
+  .container-sm {
+    max-width: 100%;
+  }
+}
+
+.logo a img {
+  width: 145px;
+}
+
+.get-started-btn {
+  margin-left: 30px;
+  background: #dddddd;
+  color: #000;
+  border-radius: 4px;
+  padding: 8px 25px;
+  white-space: nowrap;
+  transition: 0.3s;
+  font-size: 14px;
+  font-weight: 600;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.lloginBTn {
+  background: linear-gradient(to right, #436ad8 0, #b264b9 100%) !important;
+  border-radius: 0 !important;
+  border: 0;
+  color: #fff !important;
+}
+
+@media (max-width: 992px) {
+  .get-started-btn {
+    margin: 0 4px 0 0;
+    padding: 6px 9px !important;
+    font-size: 11px;
+    font-size: 11px;
+    border-radius: 0;
+  }
+}
+
+
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}

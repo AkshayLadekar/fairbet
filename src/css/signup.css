@@ -1,0 +1,570 @@
+/* 
+.login-first {
+  background-color: #0c0c0e;
+  padding: 12px 0;
+}
+
+.id-redy {
+  color: #fff;
+  margin-bottom: 15px;
+  text-align: center;
+  font-size: 12px;
+}
+
+.row-mr {
+  margin: 0 !important;
+}
+
+.row-mr .col {
+  padding-right: 8px;
+  padding-left: 8px;
+}
+.col {
+  flex-basis: 0;
+  flex-grow: 1;
+  max-width: 100%;
+  flex: 1 0;
+}
+.rdsc {
+  color: #fff;
+  font-size: 10px;
+  line-height: 8px;
+}
+.rdsc span {
+  display: block;
+  line-height: 15px;
+}
+
+.limg {
+  float: left;
+  width: 46px;
+  margin-right: 5px;
+}
+.limg img {
+  width: 100%;
+  max-width: 100%;
+  vertical-align: middle;
+  border-style: none;
+}
+
+.whtsmain {
+  text-align: center;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.whtsmain a {
+  color: #fff;
+}
+.whtaBtn {
+  width: 140px;
+  margin: auto;
+  display: block;
+}
+
+.whtaBtn img {
+  width: 100%;
+  max-width: 100%;
+}
+
+.borderdv {
+  width: 100%;
+  border-top: 2px solid #7366cc;
+  margin: 20px auto;
+}
+
+.or-sep {
+  color: #fff;
+  font-size: 16px;
+  position: absolute;
+  left: 50%;
+  margin-left: -10px;
+  margin-top: -16px;
+  background-color: #0c0c0e;
+  padding: 4px;
+}
+
+.login-second {
+  padding: 8px 10px 25px;
+  background-color: #fff;
+}
+
+section.secLogin {
+  display: block;
+  padding: 0;
+}
+
+.login-main-bx {
+  padding: 0 12px !important;
+}
+
+
+.secLogin .username-input {
+  width: 100%;
+  border-bottom: 1px solid #6c66cd;
+  height: 36px;
+  margin-top: 10px;
+}
+
+.secLogin input {
+  width: 75%;
+  font-size: 14px;
+  font-weight: 300;
+  padding: 7px 0;
+  border: none;
+  background-color: inherit;
+  color: #000;
+}
+
+
+.loBTm {
+  width: 100%;
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
+.logbk {
+  float: left;
+}
+
+.logreg {
+  float: right;
+}
+
+.logbk a {
+  color: #fefefe;
+  font-size: 17px;
+  display: block;
+  margin-top: 7px;
+}
+
+.log-reg-btn {
+  background: linear-gradient(to right, #436ad8 0, #b264b9 100%);
+  border-radius: 12px;
+  padding: 7px 16px;
+  margin-top: 20px;
+  display: inline-block;
+  font-size: 14px;
+  color: #fff;
+  border: 0;
+  text-decoration: none;
+}
+
+.alrdy-main {
+  width: 100%;
+  text-align: center;
+}
+ */
+
+.login-first {
+  background-color: #0c0c0e;
+  padding: 12px 0;
+}
+.limg img {
+  width: 100%;
+  max-width: 100%;
+}
+.limg {
+  float: left;
+  width: 46px;
+  margin-right: 5px;
+}
+.rdsc {
+  color: #fff;
+}
+.row-mr .col {
+  padding-right: 8px;
+  padding-left: 8px;
+}
+.or-sep {
+  color: #fff;
+  font-size: 16px;
+  position: absolute;
+  left: 50%;
+  margin-left: -10px;
+  margin-top: -16px;
+  background-color: #0c0c0e;
+  padding: 4px;
+}
+.rdsc {
+  font-size: 10px;
+  line-height: 8px;
+}
+.rdsc span {
+  display: block;
+  line-height: 15px;
+}
+.loginOuter {
+  width: 100%;
+}
+.row-mr {
+  margin: 0 !important;
+}
+.id-redy {
+  color: #fff;
+  margin-bottom: 15px;
+  text-align: center;
+  font-size: 12px;
+}
+.whtsmain {
+  text-align: center;
+  width: 100%;
+  margin-top: 20px !important;
+}
+.whtaBtn {
+  width: 140px;
+  margin: auto;
+  display: block;
+}
+.whtaBtn img {
+  width: 100%;
+  max-width: 100%;
+}
+.borderdv {
+  width: 100%;
+  border-top: 1px solid #7366cc;
+  margin: 10px 0;
+  margin-top: 20px !important;
+}
+
+/**************************/
+.otpDv {
+  float: right;
+}
+.otpCount {
+  text-align: right;
+  display: block;
+  font-size: 10px;
+}
+.gtopt {
+  background: linear-gradient(to right, #436ad8 0%, #b264b9 100%);
+  border-radius: 12px;
+  padding: 3px 9px;
+  margin-top: 2px;
+  display: inline-block;
+  font-size: 12px;
+}
+.secLogin input {
+  width: 84%;
+  font-size: 14px;
+  font-weight: 300;
+  padding: 7px 0;
+  border: none;
+  background-color: inherit;
+  color: #000;
+}
+.secLogin input:focus-visible {
+  outline: 0;
+}
+.secLogin .preno {
+  padding-right: 0;
+  font-style: normal;
+}
+.loBTm {
+  width: 100%;
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
+.login-second {
+  padding: 8px 10px;
+  background-color: #fff;
+  padding-bottom: 25px;
+}
+.logbk {
+  float: left;
+}
+.logbk a {
+    color: #fff;
+    font-size: 14px;
+    display: block;
+    text-decoration: none;
+}
+.logreg {
+  float: right;
+}
+.alrdy-main {
+  width: 100%;
+  text-align: center;
+}
+.alredy {
+  color: #000;
+  text-decoration: underline;
+  font-size: 14px;
+}
+.log-reg-btn {
+  background: linear-gradient(to right, #436ad8 0%, #b264b9 100%);
+  border-radius: 12px;
+  padding: 7px 16px;
+  margin-top: 2px;
+  display: inline-block;
+  font-size: 14px;
+  border: 0;
+  color: #fff;
+}
+.secLogin .username-input,
+.secLogin .password-input {
+  width: 100%;
+  border-bottom: 1px solid #6c66cd;
+  height: 36px;
+  margin-top: 10px;
+}
+.secLogin i {
+  width: 14px;
+  color: #000;
+  padding-right: 7px;
+}
+
+.secLogin .login-form > p {
+  width: 90%;
+  font-size: 1.1rem;
+  text-align: right;
+  margin-top: 5px;
+  font-weight: 300;
+}
+
+.secLogin .login-btn {
+  border: none;
+  padding: 7px 20px;
+  width: 50%;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  background-image: linear-gradient(
+    43deg,
+    hsla(340, 100%, 76%, 1) 0%,
+    hsla(269, 100%, 77%, 1) 100%
+  );
+  color: white;
+  font-weight: 600;
+}
+
+.secLogin .alternative-signup {
+  width: 70%;
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.secLogin .alternative-signup > p {
+  width: 90%;
+  font-size: 1.1rem;
+  text-align: center;
+  margin-bottom: 5px;
+  font-weight: 300;
+}
+section.secLogin {
+  padding: 0;
+}
+
+.registerForm select.form-control:not([size]):not([multiple]) {
+  height: calc(2.25rem + 2px) !important;
+  line-height: 28px;
+  border-top: 0 !important;
+  border-right: 0 !important;
+  border-left: 0 !important;
+  border-radius: 0 !important;
+  background-color: transparent !important;
+  padding: 5px 0 !important;
+}
+.mobile1 {
+  width: 77% !important;
+}
+
+@media only screen and (max-device-width: 290px) {
+  .limg {
+    float: left;
+    width: 35%;
+    margin-right: 5px;
+  }
+  .rdsc span {
+    line-height: 9px;
+  }
+}
+
+.registerForm {
+  padding: 0;
+}
+
+@media only screen and (min-width: 400px) {
+  .rdsc span {
+    display: block;
+    line-height: 10px;
+    margin-top: 6px;
+  }
+  .limg {
+    width: 56px;
+  }
+}
+
+/***************************/
+
+/* -------------- bns css Start ----------------- */
+
+.clrBoth {
+  height: 0;
+  line-height: 0;
+  clear: both;
+}
+.rtArrow {
+  float: left;
+  color: #000;
+}
+.bonusPt {
+  font-size: 16px;
+  color: #000;
+  display: inline-block;
+  margin-top: 10px;
+  float: left;
+}
+.bons-his {
+  font-size: 10px;
+  color: #fff;
+  line-height: 8px;
+  text-align: center;
+  display: block;
+  margin-right: 6px;
+  position: relative;
+  background: linear-gradient(to right, #436ad8 0%, #b264b9 100%);
+  margin-top: 8px;
+  width: 100px;
+  padding: 8px 0px;
+  cursor: pointer;
+  float: right;
+  border-radius: 4px;
+}
+.bnusImg {
+  width: 20px;
+  height: auto;
+  display: inline-block;
+}
+.top-headert {
+  width: 100%;
+  background-color: #fff;
+  padding: 0px 5px 5px 5px;
+}
+.bonusl-arrow {
+  font-size: 34px;
+  margin-right: 10px;
+  float: left;
+}
+.bonusTp {
+  width: 100%;
+  background-color: #0e0e0e;
+}
+.bonus-tp-ico {
+  float: left;
+  width: 20%;
+  text-align: center;
+  font-size: 15px;
+  padding: 3px;
+}
+.bonus-tp-ico.active {
+  color: palevioletred;
+}
+.bonus-tp-ico span {
+  display: block;
+  font-size: 11px;
+}
+.bonus-tp-ico img {
+  width: 28px;
+  max-width: 28px;
+}
+.bns-tb-outer {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 5px;
+}
+.live-casino-strip {
+  float: left;
+  font-size: 14px;
+  height: 30px;
+  width: 100px;
+  padding-top: 8px;
+  padding-left: 8px;
+  margin-left: -5px;
+  margin-bottom: 7px;
+
+  background-repeat: no-repeat;
+  color: #fff;
+}
+.bonus-head {
+  color: #515151;
+  font-size: 18px;
+  line-height: 20px;
+}
+.ad-img img {
+  width: 100%;
+  max-width: 100%;
+}
+.col-4.ad-img {
+  padding-left: 0;
+  padding-right: 5px;
+  padding-bottom: 5px;
+}
+.btm-fulldv {
+  border-top: 1px solid #d9d9d9;
+}
+.btm-right-arw {
+  float: right;
+  font-size: 30px;
+  margin-top: 10px;
+  color: #b0b0b0;
+}
+.btmactivate {
+  font-weight: bold;
+  font-size: 13px;
+  margin-bottom: 0;
+  padding-top: 7px;
+  color: #515151;
+}
+.activat-Hist {
+  font-size: 11px;
+}
+.bnsTb {
+  border: 1px solid #e2e2e2;
+  padding: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-radius: 8px;
+  box-shadow: 1px 2px 11px -4px rgba(0, 0, 0, 0.72);
+  -webkit-box-shadow: 1px 2px 11px -4px rgba(0, 0, 0, 0.72);
+  -moz-box-shadow: 1px 2px 11px -4px rgba(0, 0, 0, 0.72);
+}
+.bonus-tp-ico.active {
+  color: #b264b9;
+}
+.tab-sec-com .row {
+  margin-right: -8px;
+  margin-left: -8px;
+}
+.btm-fulldv .row {
+  margin-right: -8px;
+  margin-left: -8px;
+}
+@media only screen and (max-device-width: 280px) {
+  .bonus-tp-ico span {
+    font-size: 8px;
+  }
+}
+/* -------------- #bns page css end  ----------------- */
+
+/*------------------------*/
+.login-second {
+  padding: 8px 15px;
+  background-color: #fff;
+  padding-bottom: 25px;
+}
+
+.pos {
+  position: relative;
+}
+.rt-eye {
+  position: absolute;
+  right: 2px;
+  top: 7px;
+}
+.secLogin .username-input,
+.secLogin .password-input {
+  width: 100%;
+  border-bottom: 1px solid #6c66cd;
+  height: 36px;
+  margin-top: 10px;
+}

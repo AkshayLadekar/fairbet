@@ -1,0 +1,263 @@
+
+
+
+.secpd {
+  padding-top: 0 !important;
+  padding-bottom: 0px;
+}
+
+section {
+  padding: 60px 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.pad00 {
+  padding: 0 !important;
+  margin-top: 4%;
+}
+
+.testimonials .testimonials-slider {
+  overflow: hidden;
+}
+.swiper-pointer-events {
+  touch-action: pan-y;
+}
+.swiper {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  overflow: hidden;
+  list-style: none;
+  padding: 0;
+  z-index: 1;
+}
+
+.testimonials .testimonial-item {
+  box-sizing: content-box;
+  padding: 0px;
+  margin: 30px 10px;
+  min-height: auto;
+  box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.08);
+  position: relative;
+  background: #fff;
+  border-radius: 15px;
+}
+img.testimonial-img {
+  width: 100%;
+  border-radius: 10px;
+  float: left;
+  margin: 0 10px 0 0;
+}
+
+.md-rwo {
+  margin-left: 5px !important;
+  margin-right: 5px !important;
+}
+
+.tes {
+  margin-top: 5px !important;
+}
+
+.colsp .crvimg {
+  margin: 0px 0;
+}
+.tes .col-4 {
+  padding: 0 4px;
+  margin-top: 10px !important;
+}
+.colsp .crvimg img {
+  border-radius: 12px;
+}
+
+.inplayMain {
+  padding: 15px 10px;
+  padding-bottom: 0;
+  padding-top: 10px;
+}
+.inplay-popular-header {
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+  background-color: #108705 !important;
+}
+.inplay-header-color {
+  background-color: var(--in-play-block-color);
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+}
+.inplay-popular-header__logo {
+  display: flex;
+  align-items: center;
+}
+img.inpl {
+  width: 20px;
+  height: auto;
+  margin-right: 7px;
+}
+.inplay-popular-header__logo-text {
+  font-family: "Lato", sans-serif !important;
+  font-style: normal;
+  font-weight: 700 !important;
+  font-size: 18px !important;
+  line-height: 21.6px !important;
+  color: var(--white);
+  color: #fff;
+}
+.crdGame {
+  background-color: #fff;
+  height: 34px;
+  padding: 5px;
+  color: #3e3e3e;
+  margin: 10px 11px 5px 11px;
+  margin-bottom: -5px;
+}
+.crdNmar {
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 0px;
+}
+.list-logo {
+  float: left;
+  width: 20px;
+  height: auto;
+  margin-right: 6px;
+  margin-left: 4px;
+  margin-top: 2px;
+}
+section#testimonials {
+  background-color: #dddddd;
+}
+.crvimgrst .crvimg .member-img {
+  margin: 8px 0;
+}
+
+.swiper-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  transition-property: transform;
+  box-sizing: content-box;
+}
+
+.crvimgrst {
+  margin-top: 1% !important;
+}
+
+.crvimgrst1 {
+  margin-top: 5px !important;
+}
+
+
+.evol
+{
+     
+    border-radius: 6px;
+    margin-bottom: 7px;
+    background-image: url("../images/Img-1.png");background-repeat: no-repeat;
+    background-color: #8953e7;
+    background-size: 58px 35px;
+     background-position: bottom right;
+        margin-top: 12px;
+}
+.evol.cube
+{
+      
+    background-image: url("../images/img-2.png");background-repeat: no-repeat;
+    background-color: #8953e7;
+    background-size: 109px 33px;
+     background-position: bottom right;
+}
+.evol-label
+{
+    color: #fff;
+    font-size: 11px;
+    height: 34px;
+    line-height: 34px;
+        margin-bottom: 0;
+}
+.tpgame-sec
+{
+    background-image: url("../images/casin-bg.png");background-repeat: no-repeat !important;
+    background-color: #000 !important;
+    background-size: 230px 35px !important;
+    background-position: bottom right !important;
+    height: 36px !important;
+}
+.evol-label img
+{
+    margin-top: 7px
+}
+.tpgame-sec .crdNmar
+{
+    color: #fff
+}
+
+
+@media (max-width: 520px) {
+.evol-label {
+    color: #fff;
+    font-size: 11px;
+    height: 29px;
+    line-height: 29px;
+    margin-bottom: 0;
+}
+.evol-label img {
+    margin-top: 5px;
+}    
+}
+
+@media (max-width: 440px) {
+.evol-label {
+    color: #fff;
+    font-size: 11px;
+    height: 29px;
+    line-height: 29px;
+    margin-bottom: 0;
+}
+.evol
+{
+        margin-bottom: 6px;
+    margin-top: 7px
+}
+}
+@media (max-width: 380px) {
+.evol-label {
+    color: #fff;
+    font-size: 11px;
+    height: 29px;
+    line-height: 29px;
+    margin-bottom: 0;
+}
+.evol
+{
+   margin-bottom: 5px;
+    margin-top: 5px;
+}
+}
+
+
+@media only screen and (min-width: 360px) {
+  .pad00 {
+    margin-top: 13% !important;
+  }
+}
+@media only screen and (min-width: 280px) and (max-width: 280px) {
+  .pad00 {
+    margin-top: 20% !important;
+  }
+}
+@media only screen and (min-width: 767px) {
+  .pad00 {
+    margin-top: 7% !important;
+  }
+}
+@media only screen and (min-width: 1281px) {
+  .pad00 {
+    margin-top: 4% !important;
+  }
+}
