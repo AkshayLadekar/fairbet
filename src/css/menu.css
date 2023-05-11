@@ -5,7 +5,7 @@ body {
 
 .ovl {
   position: fixed;
-  top: 53px;
+  top: 40px;
   bottom: 52px;
   width: 100%;
   background: #2b2f35;
@@ -74,9 +74,7 @@ ul {
   padding: 0;
 }
 
-.swt p {
-  margin-left: 0px;
-  margin-top: 15px;
-  line-height: 10px;
-  color: #fff;
+.swt a {
+  color: #fff ;
+  text-decoration: none;
 }

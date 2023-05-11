@@ -197,7 +197,6 @@ function Menu() {
         </div>
         <div _ngcontent-c5 className="row">
           <div _ngcontent-c5 className="col-lg-6 col-md-6 col-6 swt">
-            {/**/}
             <p _ngcontent-c5>
               <a _ngcontent-c5 target="_blank" href="https://wa.link/37tgon">
                 <img
