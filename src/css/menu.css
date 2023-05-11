@@ -70,3 +70,7 @@ ul {
     max-width: 353px;
     width: 100%;
 }
+
+.clearfix ul {
+  padding: 0;
+}

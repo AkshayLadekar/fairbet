@@ -19,6 +19,8 @@ import Evo from "../images/evolution-logoo.png";
 import Feed from "../images/feedback.png";
 import Support from "../images/support.png";
 import Support1 from "./Support";
+import Whatsapp from "../images/whatsapp-green.png";
+import Telegram from "../images/telegram-blue.png";
 
 import { Navigate, useNavigate } from "react-router-dom";
 
@@ -191,6 +193,40 @@ function Menu() {
                 </a>
               </li>
             </ul>
+          </div>
+        </div>
+        <div _ngcontent-c5 className="row">
+          <div _ngcontent-c5 className="col-lg-6 col-md-6 col-6 swt">
+            {/**/}
+            <p _ngcontent-c5>
+              <a _ngcontent-c5 target="_blank" href="https://wa.link/37tgon">
+                <img
+                  _ngcontent-c5
+                  alt="whatsapp"
+                  src={Whatsapp}
+                  style={{ height: "32px" }}
+                />
+                <span _ngcontent-c5 className="color: #fff;font-size: 12px;">
+                  WhatsApp
+                </span>
+              </a>
+            </p>
+          </div>
+          <div _ngcontent-c5 className="col-lg-6 col-md-6 col-6 swt">
+            {/**/}
+            <p _ngcontent-c5>
+              <a _ngcontent-c5 target="_blank" href="https://t.me/Fairbets01">
+                <img
+                  _ngcontent-c5
+                  alt="telegram"
+                  src={Telegram}
+                  style={{ height: "32px" }}
+                />
+                <span _ngcontent-c5 className="color: #fff;font-size: 12px;">
+                  Telegram
+                </span>
+              </a>
+            </p>
           </div>
         </div>
       </div>
