@@ -70,11 +70,18 @@ ul {
   width: 100%;
 }
 
-.clearfix ul {
-  padding: 0;
+.swt p {
+  margin-left: 0px;
+  margin-top: 15px;
+  line-height: 10px;
+  color: #fff;
 }
 
 .swt a {
-  color: #fff ;
+  color: #fff;
   text-decoration: none;
+}
+
+.clearfix ul {
+  padding: 0;
 }

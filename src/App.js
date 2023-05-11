@@ -17,6 +17,14 @@ import Payment from "./components/Payment";
 import Ezugi from "./components/Ezugi";
 import Evolution from "./components/Evolution";
 import Feedback from "./components/Feedback";
+import Topgames from "./components/Casinos/Topgames";
+import Virtuals from "./components/Casinos/Virtuals";
+import Blackjack from "./components/Casinos/Blackjack";
+import Roulette from "./components/Casinos/Roulette";
+import AndarBahar from "./components/Casinos/AndarBahar";
+import DragonTiger from "./components/Casinos/DragonTiger";
+import Baccarat from "./components/Casinos/Baccarat";
+import Poker from "./components/Casinos/Poker";
 
 function App() {
   const result = useSelector((state) => state.cartData);
@@ -42,6 +50,16 @@ function App() {
           <Route path="/ezugi" element={<Ezugi />} />
           <Route path="/evolution" element={<Evolution />} />
           <Route path="/feedback" element={<Feedback />} />
+          <Route path="/casino/topgames" element={<Topgames />} />
+          <Route path="/casino/virtuals" element={<Virtuals />} />
+          <Route path="/casino/blackjack" element={<Blackjack />} />
+          <Route path="/casino/roulette" element={<Roulette />} />
+          <Route path="/casino/andarbahar" element={<AndarBahar />} />
+          <Route path="/casino/dragontiger" element={<DragonTiger />} />
+          <Route path="/casino/baccarat" element={<Baccarat />} />
+          <Route path="/casino/poker" element={<Poker />} />
+
+
         </Routes>
       </BrowserRouter>
     </>

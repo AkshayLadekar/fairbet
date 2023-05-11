@@ -1,38 +1,41 @@
-import React, { useEffect, useState } from "react";
-import Header from "./Header";
-import Footer from "./Footer";
-import Casinobet from "../images/fairbets-casino.png";
-import "../../src/css/casino.css";
+import React from "react";
+import Header from "../Header";
+import Footer from "../Footer";
 import { Navigate, useNavigate } from "react-router-dom";
 import { Container, Dropdown, DropdownButton } from "react-bootstrap";
-import Lobby from "../images/lobby.jpg";
+import Lobby from "../../images/lobby.jpg";
+import Casinobet from "../../images/fairbets-casino.png";
+import "../../css/topgames.css";
 
-function Casino() {
+function Topgames() {
   return (
     <>
       <div>
         <Header />
       </div>
       <div>
-      <form>
-        <div className="search-container">
-          <input type="text" placeholder="Search..." className="search-input" />
-          <button type="submit" className="search-button">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              fill="currentColor"
-              class="bi bi-search"
-              viewBox="0 0 16 16"
-            >
-              <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
-            </svg>
-          </button>
-        </div>
-      </form>
+        <form>
+          <div className="search-container">
+            <input
+              type="text"
+              placeholder="Search..."
+              className="search-input"
+            />
+            <button type="submit" className="search-button">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-search"
+                viewBox="0 0 16 16"
+              >
+                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+              </svg>
+            </button>
+          </div>
+        </form>
       </div>
-      
 
       <div _ngcontent-c1 className="casinnologo">
         <img
@@ -83,18 +86,6 @@ function Casino() {
             </div>
           </div>
         </div>
-        {/* <div>
-          {data1.map((item) => {
-            console.log("Image", item.Image);
-            return (
-              <>
-                <div class="row">
-                  <div class="col-sm-3"><img src={Lobby} /></div>
-                </div>
-              </>
-            );
-          })}
-        </div> */}
       </div>
 
       <div>
@@ -104,4 +95,4 @@ function Casino() {
   );
 }
 
-export default Casino;
+export default Topgames;

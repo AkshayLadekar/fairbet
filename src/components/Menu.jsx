@@ -49,6 +49,46 @@ function Menu() {
     navigate("/feedback");
   };
 
+  const navigateToTopgames = () => {
+    navigate("/casino/topgames");
+  };
+
+  const navigateToLiveCasino = () => {
+    navigate("/casino");
+  };
+
+  const navigateToSlots = () => {
+    navigate("/slots");
+  };
+
+  const navigateToVirtuals = () => {
+    navigate("/casino/virtuals");
+  };
+
+  const navigateToBlackjack = () => {
+    navigate("/casino/blackjack");
+  };
+
+  const navigateToRoulette = () => {
+    navigate("/casino/roulette");
+  };
+
+  const navigateToAndar = () => {
+    navigate("/casino/andarbahar");
+  };
+
+  const navigateToDragonTiger = () => {
+    navigate("/casino/dragontiger");
+  };
+
+  const navigateToBaccarat = () => {
+    navigate("/casino/baccarat");
+  };
+
+  const navigateToPoker = () => {
+    navigate("/casino/poker");
+  };
+
   return (
     <>
       <Header />
@@ -113,13 +153,13 @@ function Menu() {
             </h3>
             <ul _ngcontent-c1>
               <li _ngcontent-c1>
-                <a _ngcontent-c1 href="/casinos/top-games">
+                <a onClick={navigateToTopgames} _ngcontent-c1 href="#">
                   <img _ngcontent-c1 alt="Casino" src={Casino} />
                   <span _ngcontent-c1>Top Games</span>
                 </a>
               </li>
               <li _ngcontent-c1>
-                <a _ngcontent-c1 href="/casinos/live-casino">
+                <a onClick={navigateToLiveCasino} _ngcontent-c1 href="#">
                   <img
                     _ngcontent-c1
                     alt="Live
@@ -130,37 +170,37 @@ function Menu() {
                 </a>
               </li>
               <li _ngcontent-c1>
-                <a _ngcontent-c1 href="/casinos/slots">
+                <a onClick={navigateToSlots} _ngcontent-c1 href="#">
                   <img _ngcontent-c1 alt="Slots" src={Slots} />
                   <span _ngcontent-c1>Slots</span>
                 </a>
               </li>
               <li _ngcontent-c1>
-                <a _ngcontent-c1 href="/casinos/virtual-games">
+                <a onClick={navigateToVirtuals} _ngcontent-c1 href="#">
                   <img _ngcontent-c1 alt="Virtuals" src={Virtuals} />
                   <span _ngcontent-c1>Virtuals</span>
                 </a>
               </li>
               <li _ngcontent-c1>
-                <a _ngcontent-c1 href="/casinos/blackjack">
+                <a onClick={navigateToBlackjack} _ngcontent-c1 href="#">
                   <img _ngcontent-c1 alt="Virtuals" src={Blackjack} />
                   <span _ngcontent-c1>Blackjack</span>
                 </a>
               </li>
               <li _ngcontent-c1>
-                <a _ngcontent-c1 href="/casinos/roulette">
+                <a onClick={navigateToRoulette} _ngcontent-c1 href="#">
                   <img _ngcontent-c1 alt="Virtuals" src={Roulette} />
                   <span _ngcontent-c1>Roulette</span>
                 </a>
               </li>
               <li _ngcontent-c1>
-                <a _ngcontent-c1 href="/casinos/andar-bahar">
+                <a onClick={navigateToAndar} _ngcontent-c1 href="#">
                   <img _ngcontent-c1 alt="Virtuals" src={Andarbar} />
                   <span _ngcontent-c1>Andar Bahar</span>
                 </a>
               </li>
               <li _ngcontent-c1>
-                <a _ngcontent-c1 href="/casinos/dragon-tiger">
+                <a onClick={navigateToDragonTiger} _ngcontent-c1 href="#">
                   <img
                     _ngcontent-c1
                     alt="Virtuals"
@@ -171,7 +211,7 @@ function Menu() {
                 </a>
               </li>
               <li _ngcontent-c1>
-                <a _ngcontent-c1 href="/casinos/baccarat">
+                <a onClick={navigateToBaccarat} _ngcontent-c1 href="#">
                   <img
                     _ngcontent-c1
                     alt="Virtuals"
@@ -182,7 +222,7 @@ function Menu() {
                 </a>
               </li>
               <li _ngcontent-c1>
-                <a _ngcontent-c1 href="/casinos/poker">
+                <a onClick={navigateToPoker} _ngcontent-c1 href="#">
                   <img
                     _ngcontent-c1
                     alt="Virtuals"
@@ -197,6 +237,7 @@ function Menu() {
         </div>
         <div _ngcontent-c5 className="row">
           <div _ngcontent-c5 className="col-lg-6 col-md-6 col-6 swt">
+            {/**/}
             <p _ngcontent-c5>
               <a _ngcontent-c5 target="_blank" href="https://wa.link/37tgon">
                 <img
@@ -229,6 +270,7 @@ function Menu() {
           </div>
         </div>
       </div>
+
       <FooterSubMenu />
     </>
   );

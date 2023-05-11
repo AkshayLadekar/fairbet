@@ -8,6 +8,9 @@ function Payment() {
         <li className="active">
           <a
             className="active show"
+
+
+            
             data-toggle="tab"
             href="#deposit"
             role="tab"
