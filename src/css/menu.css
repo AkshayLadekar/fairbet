@@ -32,45 +32,51 @@ body {
 }
 
 .wrap li a {
-    width: 82px;
-    height: 82px;
-    margin-bottom: 1.5px;
-    border-radius: 2px;
-    padding: 12px 0px 0;
-    background: #43444a;
-    font-size: 13px;
-    display: block;
-    color: #fff;
-    line-height: 28px;
-    text-decoration: none;
+  width: 82px;
+  height: 82px;
+  margin-bottom: 1.5px;
+  border-radius: 2px;
+  padding: 12px 0px 0;
+  background: #43444a;
+  font-size: 13px;
+  display: block;
+  color: #fff;
+  line-height: 28px;
+  text-decoration: none;
 }
 
 .wrap li a img {
-    width: 22px;
-    height: 22px;
+  width: 22px;
+  height: 22px;
 }
 
 ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-
 .wrap li a span {
-    display: block;
+  display: block;
 }
 
 .Grid__divider___qc2Np {
-    background: #43444a;
-    -webkit-flex-shrink: 0;
-    flex-shrink: 0;
-    height: 1px;
-    margin: 16px auto;
-    max-width: 353px;
-    width: 100%;
+  background: #43444a;
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+  height: 1px;
+  margin: 16px auto;
+  max-width: 353px;
+  width: 100%;
 }
 
 .clearfix ul {
   padding: 0;
+}
+
+.swt p {
+  margin-left: 0px;
+  margin-top: 15px;
+  line-height: 10px;
+  color: #fff;
 }
