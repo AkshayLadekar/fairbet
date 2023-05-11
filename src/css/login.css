@@ -21,7 +21,7 @@ label {
   padding: 10px;
   font-size: 16px;
   border-radius: 5px;
-  border: none;
+  border: 1px solid grey;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
   margin-top: 5px;
 }
