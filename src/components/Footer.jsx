@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import Envolope from "../images/envolop.png";
 import Whatsapp from "../images/whatsapp-green.png";
 import Telegram from "../images/telegram-blue.png";
@@ -9,32 +9,50 @@ import Menus from "../images/mnu.png";
 import Home from "../images/home1.png";
 import Casino from "../images/livecasino (1).svg";
 import Slots from "../images/slots.png";
+import Foot from "../images/footer.png";
 import "../css/footer.css";
 import Login from "./Login";
-import {Routes, Route, useNavigate} from 'react-router-dom';
+import { Routes, Route, useNavigate } from "react-router-dom";
 
 function Footer() {
-
   const [modalShow1, setModalShow1] = useState(false);
 
   const navigate = useNavigate();
 
   const navigateToMenu = () => {
-    navigate('/menu');
+    navigate("/menu");
   };
 
-  
-
   const navigateToHome = () => {
-    navigate('/');
+    navigate("/");
   };
 
   const navigateToCasino = () => {
-    navigate('/casino');
+    navigate("/casino");
   };
 
   const navigateToSlots = () => {
-    navigate('/slots');
+    navigate("/slots");
+  };
+
+  const navigateToTerms = () => {
+    navigate("/page/terms-conditions");
+  };
+
+  const navigateToAml = () => {
+    navigate("/page/aml-policy");
+  };
+
+  const navigateToGaming = () => {
+    navigate("/page/responsible-gaming");
+  };
+
+  const navigateToPrivacy = () => {
+    navigate("/page/privacy-policy");
+  };
+
+  const navigateToTermsNent = () => {
+    navigate("/page/terms&condition-nent");
   };
 
   return (
@@ -136,7 +154,10 @@ function Footer() {
                     "line-height": "22px",
                   }}
                 >
-                  <a target="_blank" href="https://www.instagram.com/_fairbets/">
+                  <a
+                    target="_blank"
+                    href="https://www.instagram.com/_fairbets/"
+                  >
                     <img
                       alt="Instagram"
                       src={Instagram}
@@ -147,22 +168,32 @@ function Footer() {
                 </p>
               </div>
               <div className="col-lg-3 col-md-3 col-6">
-                <h5>RULES AND REGULATIONS</h5>
+                <h5 className="rule">RULES AND REGULATIONS</h5>
                 <ul className="rulr">
                   <li>
-                    <a href="#">Terms and Conditions</a>
+                    <a onClick={navigateToTerms} href="#">
+                      Terms and Conditions
+                    </a>
                   </li>
                   <li>
-                    <a href="#">AML Policy</a>
+                    <a onClick={navigateToAml} href="#">
+                      AML Policy
+                    </a>
                   </li>
                   <li>
-                    <a href="#">Responsible Gaming</a>
+                    <a onClick={navigateToGaming} href="#">
+                      Responsible Gaming
+                    </a>
                   </li>
                   <li>
-                    <a href="#">Privacy Policy</a>
+                    <a onClick={navigateToPrivacy} href="#">
+                      Privacy Policy
+                    </a>
                   </li>
                   <li>
-                    <a href="#">Terms and Conditions NetEnt</a>
+                    <a onClick={navigateToTermsNent} href="#">
+                      Terms and Conditions NetEnt
+                    </a>
                   </li>
                 </ul>
                 <div
@@ -188,9 +219,10 @@ function Footer() {
                       href="https://validator.antillephone.com/validate?domain=fairbets.co&seal_id=2f958e3b07ab0a9d02b9c189f30607a36103cd0282df3348228cb23cdd67242ccc56b77e798af4b09537dad9608d732d&stamp=5ab0c8dbf295ac4889c1f7448a327883"
                     >
                       <img
+                        className="foot"
                         alt
                         style={{ width: "100%", height: "auto" }}
-                        src="https://95481486-2e31-454b-bc94-b0c32624a772.snippet.antillephone.com/sealassets/5ab0c8dbf295ac4889c1f7448a327883-fairbets.co-2f958e3b07ab0a9d02b9c189f30607a36103cd0282df3348228cb23cdd67242ccc56b77e798af4b09537dad9608d732d-c2VhbC5wbmc%3D?status=valid"
+                        src={Foot}
                       />
                     </a>
                   </div>
@@ -202,7 +234,11 @@ function Footer() {
         </footer>
       </section>
       <div className="MobileFooter_mobileFooter">
-        <div onClick={() => setModalShow1(true)} role="button" className="MobileFooter_footerItem ">
+        <div
+          onClick={() => setModalShow1(true)}
+          role="button"
+          className="MobileFooter_footerItem "
+        >
           <a
             className="MobileFooter_itemContent"
             data-hook="mobile-footerpromotions"
@@ -217,7 +253,11 @@ function Footer() {
           </a>
         </div>
         <Login show={modalShow1} onHide={() => setModalShow1(false)} />
-        <div onClick={navigateToMenu} role="button" className="MobileFooter_footerItem ">
+        <div
+          onClick={navigateToMenu}
+          role="button"
+          className="MobileFooter_footerItem "
+        >
           <a
             className="MobileFooter_itemContent"
             data-hook="mobile-footerpromotions"
@@ -231,7 +271,11 @@ function Footer() {
             <span className="MobileFooter_label">Menu</span>
           </a>
         </div>
-        <div onClick={navigateToHome} role="button" className="MobileFooter_footerItem active">
+        <div
+          onClick={navigateToHome}
+          role="button"
+          className="MobileFooter_footerItem active"
+        >
           <a
             className="MobileFooter_itemContent"
             data-hook="mobile-footerlivecasino"
@@ -243,7 +287,11 @@ function Footer() {
             <span className="MobileFooter_label">Home</span>
           </a>
         </div>
-        <div onClick={navigateToCasino} role="button" className="MobileFooter_footerItem ">
+        <div
+          onClick={navigateToCasino}
+          role="button"
+          className="MobileFooter_footerItem "
+        >
           <a
             className="MobileFooter_itemContent"
             data-hook="mobile-footerexchange"
@@ -262,7 +310,11 @@ function Footer() {
             <span className="MobileFooter_label">Live Casino</span>
           </a>
         </div>
-        <div onClick={navigateToSlots} role="button" className="MobileFooter_footerItem ">
+        <div
+          onClick={navigateToSlots}
+          role="button"
+          className="MobileFooter_footerItem "
+        >
           <a
             className="MobileFooter_itemContent"
             data-hook="mobile-footerpromotions"

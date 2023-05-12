@@ -25,6 +25,11 @@ import AndarBahar from "./components/Casinos/AndarBahar";
 import DragonTiger from "./components/Casinos/DragonTiger";
 import Baccarat from "./components/Casinos/Baccarat";
 import Poker from "./components/Casinos/Poker";
+import TermsCondition from "./components/Page/TermsCondition";
+import AmlPolicy from "./components/Page/AmlPolicy";
+import ResponsibleGaming from "./components/Page/ResponsibleGaming";
+import PrivacyPolicy from "./components/Page/PrivacyPolicy";
+import TermsNent from "./components/Page/TermsNent";
 
 function App() {
   const result = useSelector((state) => state.cartData);
@@ -58,8 +63,11 @@ function App() {
           <Route path="/casino/dragontiger" element={<DragonTiger />} />
           <Route path="/casino/baccarat" element={<Baccarat />} />
           <Route path="/casino/poker" element={<Poker />} />
-
-
+          <Route path="/page/terms-conditions" element={<TermsCondition />} />
+          <Route path="/page/aml-policy" element={<AmlPolicy />} />
+          <Route path="/page/responsible-gaming" element={<ResponsibleGaming />} />
+          <Route path="/page/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/page/terms&condition-nent" element={<TermsNent />} />
         </Routes>
       </BrowserRouter>
     </>

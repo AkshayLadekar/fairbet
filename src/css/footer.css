@@ -21,7 +21,7 @@
   color: #fff;
 }
 .mb-footer {
-  border-top: 8px solid #c51a1b;
+  border-top: 8px solid #b264b9 !important;
   background: #2b2f35;
   padding: 16px;
   width: 100%;
@@ -83,11 +83,31 @@
   object-fit: contain;
 }
 .MobileFooter_label {
-    color: #fff;
-    font-size: 10px;
-    text-align: center;
-    text-decoration: none;
+  color: #fff;
+  font-size: 10px;
+  text-align: center;
+  text-decoration: none;
 }
 footer {
-    padding-bottom: 35px;
+  padding-bottom: 35px;
+}
+
+img.foot {
+  max-width: 70%;
+}
+
+.social-footer h5 {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  margin: 8px 0;
+  color: #fff;
+}
+
+h5.rule {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  margin: 8px 0;
+  color: #fff;
 }

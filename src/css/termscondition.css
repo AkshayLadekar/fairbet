@@ -1,0 +1,37 @@
+.mb-static-content {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 2px;
+  margin: 40px 0 0;
+  padding: 13px;
+}
+.mb-static-content__rightside[_ngcontent-c1] h1[_ngcontent-c1] {
+  font-size: 24px;
+  line-height: 1.5;
+  margin: 6px 0;
+  font-weight: 700;
+}
+.mb-static-content__content {
+  border-bottom: 1px solid #ddd;
+  border-top: 1px solid #ddd;
+  color: #54555a;
+  font-size: 16px;
+  margin-bottom: 32px;
+  padding-top: 0;
+}
+.mb-static-content__content .content p:first-child {
+  margin-top: 15px;
+}
+.mb-static-content__content .content p {
+  margin: 0 0 5px;
+  color: #54555a;
+  font-size: 14px !important;
+  line-height: 23px;
+  text-align: justify;
+}
+.mb-static-content__rightside h1 {
+  font-size: 20px;
+  line-height: 1.5;
+  margin: 10 px 0 16px;
+  font-weight: 700;
+}
