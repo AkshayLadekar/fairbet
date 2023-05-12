@@ -14,7 +14,7 @@ function Header() {
       <header id="header" className="fixed-top d-flex align-items-center">
         {isNotLogin?<div className="container d-flex align-items-center innrhd">
           <div className="logo me-auto">
-            <a href="index.html" alt="">
+            <a href="/" alt="">
               <img src={Logo} alt=""/>
             </a>
           </div>

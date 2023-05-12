@@ -26,6 +26,19 @@ import { Routes, Route, useNavigate } from "react-router-dom";
 function Home() {
   const [data, setData] = useState([]);
 
+  const navigate = useNavigate();
+
+  const navigateToSatta = () => {
+    navigate('/satta');
+  };
+
+  const navigateToCasino = () => {
+    navigate('/casino');
+  };
+
+  const navigateToSlots = () => {
+    navigate('/slots');
+  };
 
   useEffect(() => {
     const postData = async () => {
@@ -50,6 +63,20 @@ function Home() {
     <>
       <div>
         <Header />
+      </div>
+
+      <div className="top_menu">
+        <ul>
+          <li>
+            <a href="/dashboard">Exchange</a>
+          </li>
+          <li>
+            <a href="/casino">Live casino</a>
+          </li>
+          <li>
+            <a href="/satta">Satta Matka</a>
+          </li>
+        </ul>
       </div>
 
       <section id="testimonials" className="testimonials secpd">
@@ -121,18 +148,18 @@ function Home() {
                   </div>
                 </div>
               </div>
-              <div className="col-6 crvimg">
-                <div className="member-img">
+              <div  className="col-6 crvimg">
+                <div onClick={navigateToSatta} className="member-img">
                   <img src={Tp6} className="img-fluid" alt />
                 </div>
-                <div className="member-img">
+                <div onClick={navigateToCasino} className="member-img">
                   <img src={Tp2} className="img-fluid" alt />
                 </div>
               </div>
             </div>
             <div className="row md-rwo  colsp crvimgrst1">
               <div className="col-6 crvimg ">
-                <div className="member-img">
+                <div onClick={navigateToSlots} className="member-img">
                   <img src={Tp3} className="img-fluid" alt />
                 </div>
               </div>

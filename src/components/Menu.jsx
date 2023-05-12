@@ -98,6 +98,7 @@ function Menu() {
             <h3 _ngcontent-c1 className="grad">
               QUICK ACCESS
             </h3>
+            <span onClick={navigateToHome} className="cross">X</span>
             <ul _ngcontent-c1>
               <li _ngcontent-c1>
                 <a onClick={navigateToHome} _ngcontent-c1 href="#">

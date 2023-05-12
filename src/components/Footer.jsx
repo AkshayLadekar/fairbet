@@ -68,7 +68,7 @@ function Footer() {
               <div className="col-lg-3 col-md-3 col-6 social-footer">
                 <h5>CONTACT FAIRBETS</h5>
                 <p style={{ display: "block", "line-height": "22px" }}>
-                  <a href="#">
+                  <a href="mailto:support@fairbets.co">
                     <img
                       alt="envelope"
                       src={Envolope}
@@ -85,7 +85,7 @@ function Footer() {
                     "line-height": "22px",
                   }}
                 >
-                  <a target="_blank" href="#">
+                  <a target="_blank" href="https://wa.link/37tgon">
                     <img
                       alt="whatsapp"
                       src={Whatsapp}
@@ -102,7 +102,7 @@ function Footer() {
                     "line-height": "22px",
                   }}
                 >
-                  <a target="_blank" href="#">
+                  <a target="_blank" href="https://t.me/Fairbets01">
                     <img
                       alt="telegram"
                       src={Telegram}
@@ -119,7 +119,7 @@ function Footer() {
                     "line-height": "22px",
                   }}
                 >
-                  <a target="_blank" href="#">
+                  <a target="_blank" href="https://twitter.com/fairbets3">
                     <img
                       alt="Twitter"
                       src={Twitter}
@@ -136,7 +136,7 @@ function Footer() {
                     "line-height": "22px",
                   }}
                 >
-                  <a target="_blank" href="#">
+                  <a target="_blank" href="https://www.instagram.com/_fairbets/">
                     <img
                       alt="Instagram"
                       src={Instagram}

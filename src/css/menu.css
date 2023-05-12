@@ -3,6 +3,15 @@ body {
   background-color: #2b2f35 !important;
 }
 
+span.cross {
+  color: #fff;
+  font-size: 25px;
+  float: right;
+  margin-top: -35px;
+  margin-right: 30px;
+  cursor: pointer;
+}
+
 .ovl {
   position: fixed;
   top: 40px;

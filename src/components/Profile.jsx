@@ -19,37 +19,6 @@ function Profile() {
   return (
     <div>
       <Header />
-      {/* <div>
-      <header id="header" className="fixed-top d-flex align-items-center">
-        <div className="container d-flex align-items-center innrhd">
-          <div className="logo me-auto">
-            <a href="index.html">
-              <img src={Logo} />
-            </a>
-          </div>
-          <a href="#" className="get-started-btn lloginBTn">
-            <img src={UserImg} />
-            Deposit
-          </a>
-          <a href="#" className="get-started-btn lloginBTn1 ">
-            <img src={UserImg} />
-            0.00
-            <span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="10"
-                height="16"
-                fill="currentColor"
-                class="bi bi-caret-down"
-                viewBox="0 0 16 18"
-              >
-                <path d="M3.204 5h9.592L8 10.481 3.204 5zm-.753.659 4.796 5.48a1 1 0 0 0 1.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 0 0-.753 1.659z" />
-              </svg>
-            </span>
-          </a>
-        </div>
-      </header>
-    </div> */}
 
       <div>
         <div className="top_menu">
