@@ -1,7 +1,7 @@
-import React from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import ProfileFooter from "./ProfileFooter";
+import React, { useState } from "react";
 import "../css/profile.css";
 import Nf10 from "../images/nf10.png";
 import Nf1 from "../images/nf1.png";
@@ -14,8 +14,11 @@ import Logo from "../images/logo.png";
 import UserImg from "../images/user_default.png";
 import Whatsapp from "../images/whatsapp-green.png";
 import Telegram from "../images/telegram-blue.png";
+import Deposite from '../components/Deposite'
 
 function Profile() {
+  const [showModal, setShowModal] = useState(false);
+  const [modalShowSignUp, setModalShowSignUp] = useState(false);
   return (
     <div>
       <Header />
@@ -27,10 +30,10 @@ function Profile() {
               <a href="/dashboard">Exchange</a>
             </li>
             <li>
-              <a href="/casino/live-casino">Live casino</a>
+              <a href="/casino">Live casino</a>
             </li>
             <li>
-              <a href="/satta-matka">Satta Matka</a>
+              <a href="/satta">Satta Matka</a>
             </li>
           </ul>
         </div>
@@ -60,11 +63,13 @@ function Profile() {
                     <span
                       className="deposit_section whitdepo"
                       style={{ cursor: "pointer" }}
+                      onClick={()=>{setShowModal(true)}}
                     >
                       <img src={Nf10} width={20} className="with" /> Withdraw{" "}
                     </span>
                   </td>
                 </tr>
+                <Deposite show={showModal}  onHide={()=>{setShowModal(false)}}></Deposite>
               </tbody>
             </table>
           </div>
