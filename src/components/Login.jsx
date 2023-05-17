@@ -63,7 +63,7 @@ function Login(props) {
   const handleClose = () => {
     setFormValues({ username: "", email: "", password: "" });
     setModalShow3(false);
-    props.close();
+    props.onHide();
   };
 
   return (
