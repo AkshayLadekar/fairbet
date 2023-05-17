@@ -231,7 +231,7 @@ function SignUp(props) {
                             I am of legal age 18+ to gamble and I accept the{" "}
                             <a
                               className="text-decoration-none"
-                              href="/page/terms-and-conditions"
+                              href="/page/terms-conditions"
                               style={{ color: "#de641f" }}
                             >
                               {" "}
