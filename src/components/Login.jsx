@@ -66,6 +66,11 @@ function Login(props) {
     props.onHide();
   };
 
+  function modalClose(e) {
+    setModalShow3(true);
+    props.akki()
+  }
+
   return (
     <Modal
       {...props}
@@ -73,10 +78,13 @@ function Login(props) {
       aria-labelledby="contained-modal-title-vcenter"
       centered
       // onHide={modalClose}
+      
     >
+      
       <Modal.Header closeButton></Modal.Header>
       <Modal.Body>
         <div>
+         
           <div className="container login">
             <form onSubmit={handleSubmit}>
               <label>
@@ -106,13 +114,13 @@ function Login(props) {
                 LOGIN
               </button>
               <button
-                onClick={() => setModalShow3(true)}
+                onClick={modalClose}
                 className="loginbtn"
                 type="submit"
               >
                 DONT HAVE AN ACCOUNT?
               </button>
-              <SignUp show={modalShow3} onHide={handleClose} />
+              <SignUp closeSignUp={() => setModalShow3(false)} show={modalShow3} onHide={handleClose} />
               <div _ngcontent-c1 className="id-join">
                 <a
                   _ngcontent-c1

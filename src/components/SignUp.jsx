@@ -21,6 +21,12 @@ function SignUp(props) {
     props.onHide();
   };
 
+  function Close2(e) {
+    setModalShow4(true);
+    props.closeSignUp();
+    e.preventDefault();
+  }
+
   return (
     <Modal
       {...props}
@@ -262,7 +268,7 @@ function SignUp(props) {
                     </div>
                     <div className="clrBoth" />
                     <div
-                      onClick={() => setModalShow4(true)}
+                      onClick={Close2}
                       className="alrdy-main"
                     >
                       <a className="alredy log-reg-btn">
