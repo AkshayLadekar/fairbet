@@ -68,7 +68,6 @@ function Login(props) {
 
   function modalClose(e) {
     setModalShow3(true);
-    props.akki()
   }
 
   return (

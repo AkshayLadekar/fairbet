@@ -252,7 +252,7 @@ function Footer() {
             <span className="MobileFooter_label">Satta Matka</span>
           </a>
         </div>
-        <Login akki={() => setModalShow1(false)} show={modalShow1} onHide={() => setModalShow1(false)} />
+        <Login show={modalShow1} onHide={() => setModalShow1(false)} />
         <div
           onClick={navigateToMenu}
           role="button"
