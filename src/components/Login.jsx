@@ -79,13 +79,15 @@ function Login(props) {
     setPasswordVisible(!passwordVisible);
   };
 
+
+
   return (
     <Modal
       {...props}
       size="lg"
       aria-labelledby="contained-modal-title-vcenter"
       centered
-      // onHide={modalClose}
+      onHide={handleClose}
     >
       <Modal.Header closeButton></Modal.Header>
       <Modal.Body>
