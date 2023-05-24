@@ -26,6 +26,7 @@ function Header(props) {
   const [showDepositeComponent, setshowDepositeComponent] = useState(true);
   const [showUpi, setShowUpi] = useState(false);
   const [showDeposite, setShowDeposite] = useState(false);
+  const [showUpiButton, setShowUpiButton] = useState(true);
   const [showUpiIcons, setShowUpiIcons] = useState(false);
   const [showPayment, setShowPayment] = useState(false);
 
@@ -95,6 +96,7 @@ function Header(props) {
                   setShowPayment(false);
                   setshowDepositeComponent(true);
                   setShowUpiIcons(false);
+                  setShowUpiButton(true)
                 }}
                 size="lg"
                 aria-labelledby="contained-modal-title-vcenter"
@@ -182,10 +184,11 @@ function Header(props) {
                               className="tab-content-tsp tab-table-data tpmar"
                               id="automatic"
                               style={{}}
-                            >
+                            >{showUpiButton?
                               <ul
                                 className="paymentlist"
                                 onClick={() => {
+                                  setShowUpiButton(false)
                                   setShowUpi(true);
                                 }}
                                 style={{}}
@@ -203,6 +206,8 @@ function Header(props) {
                                   </a>
                                 </li>
                               </ul>
+                              :<></>
+}
                               {/*--------------  UPI amount  ------------------*/}
                               {/* {showUpi?<Upi prop={true}></Upi>:<></>} */}
                               {showUpi ? (
@@ -236,6 +241,7 @@ function Header(props) {
                                       className="btn-bk mt-2 ml-2"
                                       href
                                       onClick={() => {
+                                        setShowUpiButton(true)
                                         setShowUpi(false);
                                       }}
                                     >
@@ -311,6 +317,7 @@ function Header(props) {
                                       onClick={() => {
                                         setShowPayment(false);
                                         setShowUpiIcons(false);
+                                        setShowUpiButton(true)
                                       }}
                                     >
                                       Back
@@ -437,10 +444,6 @@ function Header(props) {
               <img className="userbtn" src={userIcon} />
               0.00
             </a>
-            <SignUp
-              show={modalShowSignUp}
-              onHide={() => setModalShowSignUp(false)}
-            />
           </div>
         )}
       </header>

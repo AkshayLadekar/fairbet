@@ -3,6 +3,9 @@ import "../css/login.css";
 import Whatsapp from "../images/whatsapp-green.png";
 import Modal from "react-bootstrap/Modal";
 import SignUp from "./SignUp";
+import Eyeslash from "../images/eye-slash.svg"
+import Eyefill from "../images/eye-fill.svg"
+
 
 function Login(props) {
   const intialValues = { username: "", email: "", password: "" };
@@ -70,6 +73,12 @@ function Login(props) {
     setModalShow3(true);
   }
 
+  const [passwordVisible, setPasswordVisible] = useState(false);
+
+  const handleToggle = () => {
+    setPasswordVisible(!passwordVisible);
+  };
+
   return (
     <Modal
       {...props}
@@ -77,13 +86,10 @@ function Login(props) {
       aria-labelledby="contained-modal-title-vcenter"
       centered
       // onHide={modalClose}
-      
     >
-      
       <Modal.Header closeButton></Modal.Header>
       <Modal.Body>
         <div>
-         
           <div className="container login">
             <form onSubmit={handleSubmit}>
               <label>
@@ -99,27 +105,29 @@ function Login(props) {
               <label>
                 Password:
                 <input
-                  type="password"
+                  type={passwordVisible ? "text" : "password"}
                   className="input-search"
                   name="password"
                   value={formValues.password}
                   onChange={handleChange}
                 />
-                <a href=""><i class="fa fa-eye-slash" aria-hidden="false"></i></a>
+                <a className="eye" onClick={handleToggle}>
+                  {passwordVisible ? <img src={Eyeslash}/> : <img src={Eyefill}/>}
+                </a>
               </label>
               <p>{formErrors.password}</p>
               <label>Forget Password ?</label>
               <button className="loginbtn mb-4" type="submit">
                 LOGIN
               </button>
-              <button
-                onClick={modalClose}
-                className="loginbtn"
-                type="submit"
-              >
+              <button onClick={modalClose} className="loginbtn" type="submit">
                 DONT HAVE AN ACCOUNT?
               </button>
-              <SignUp closeSignUp={() => setModalShow3(false)} show={modalShow3} onHide={handleClose} />
+              <SignUp
+                closeSignUp={() => setModalShow3(false)}
+                show={modalShow3}
+                onHide={handleClose}
+              />
               <div _ngcontent-c1 className="id-join">
                 <a
                   _ngcontent-c1

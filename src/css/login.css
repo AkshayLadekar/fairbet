@@ -26,8 +26,6 @@ label {
   margin-top: 5px;
 }
 
-
-
 .login {
   background: #fff;
 }
@@ -40,27 +38,32 @@ label {
   padding: 10px 20px;
   font-size: 15px;
   cursor: pointer !important;
-  
 }
 
 .id-join {
-    width: 100%;
-    text-align: center;
-    margin-top: 15px;
+  width: 100%;
+  text-align: center;
+  margin-top: 15px;
 }
 .msgId {
-    font-weight: 700;
-    font-size: 16px;
-    display: inline-block;
-    margin-top: 5px;
-    background-color: #0e0e0e;
-    padding: 4px 8px;
-    border-radius: 8px;
-    text-decoration: none;
+  font-weight: 700;
+  font-size: 16px;
+  display: inline-block;
+  margin-top: 5px;
+  background-color: #0e0e0e;
+  padding: 4px 8px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+a.eye {
+  float: right;
+  position: relative;
+  top: -35px;
+  right: 10px;
 }
 
 a.msgId {
-    color: #fff;
+  color: #fff;
 }
 
 @media only screen and (max-width: 600px) {
@@ -77,9 +80,3 @@ a.msgId {
     width: 100%;
   }
 }
-
-
-
-
-
-
