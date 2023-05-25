@@ -166,7 +166,7 @@ function SignUp(props) {
                       <div className="col-6">
                         <div className="username-input">
                           <select
-                            className="form-control borBtm   "
+                            className="form-select"
                             style={{ "border-bottom": "0px !important" }}
                           >
                             <option selected value="null">
@@ -181,12 +181,13 @@ function SignUp(props) {
                       <div className="col-6">
                         <div className="username-input">
                           <select
-                            className="form-control borBtm"
+                            className="form-select"
                             formcontrolname="city"
                           >
                             <option selected value="null">
                               Select city
                             </option>
+                            <option value={1}>Hyderabad</option>
                           </select>
                         </div>
                         <div className="clrBoth" />

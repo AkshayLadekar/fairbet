@@ -49,6 +49,7 @@ body {
   background-color: #191919;
   width: 100%;
   max-width: 100%;
+  border-radius: 0;
 }
 
 .clsbtn {

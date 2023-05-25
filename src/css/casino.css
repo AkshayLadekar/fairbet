@@ -1,4 +1,4 @@
-.search-container {
+/* .search-container {
   display: flex;
   align-items: center;
   border: 2px solid #ccc;
@@ -62,4 +62,148 @@ a.dropdown-item {
 
 .casinnologo {
   margin-top: 3rem;
+} */
+
+/* ------------------- New CSS Implemented -------------------- */
+
+
+.clrBoth {
+  height: 0;
+  line-height: 0;
+  clear: both;
+}
+.scrolling-wrapper-casio {
+  overflow-x: auto;
+  margin-top: 30px;
+  padding-bottom: 15px;
+}
+.searxhin:focus-visible {
+  border: 0;
+  outline: 0;
+}
+.crv-csn {
+  padding: 3px !important;
+}
+.crv-csn img {
+  border-radius: 8px;
+}
+.casOuter {
+  background-color: #fff;
+  padding: 40px 15px;
+  padding-bottom: 0;
+  margin-top: 2rem;
+}
+.card-block {
+  background-color: blue;
+}
+.container1-casino {
+  width: 100%;
+  padding-right: 0;
+  padding-left: 0;
+}
+.casnTb {
+  width: 90px !important;
+  max-width: 90px;
+  padding: 0 8px;
+  text-align: center;
+  border-right: 1px solid #b7b6b6;
+}
+.casnTb span {
+  display: block;
+  font-size: 11px;
+  color: #575758;
+}
+.casnTb img {
+  width: 32px;
+}
+.nortBor {
+  border-right: 0 !important;
+}
+
+/* Search */
+.container1 {
+  width: 170px;
+  height: 40px;
+  background-color: #1e272e;
+  border-radius: 14px;
+  padding: 10px;
+  float: right;
+}
+.sercottr {
+  float: right;
+  height: 18px;
+  background: none;
+  color: #f7f7f7;
+  font-size: 14px;
+  border-radius: 14px;
+  outline: none;
+  border: none;
+  position: relative;
+  opacity: 1;
+  cursor: pointer;
+  width: 160px;
+  margin-right: -7px;
+  top: -25px;
+}
+.icds {
+  position: absolute;
+  top: 10px;
+  left: 5px;
+  color: #767677;
+}
+/* .search__box:focus, .search__box:hover {
+  background-color: #f1f2f6;
+} */
+
+.search__icon {
+  box-sizing: border-box;
+  float: right;
+  font-size: 2.5rem;
+  display: inline-block;
+  /*   justify-content: center;
+  align-items: center; */
+  margin-left: 0.8rem;
+  margin-top: 0;
+  cursor: pointer;
+  position: absolute;
+  color: #fa983a;
+  transition: all 0.25s ease-in;
+  padding: 0.7rem;
+  border-radius: 50%;
+}
+
+.container:hover > .search__box {
+  width: 85%;
+  padding: 0 1rem;
+}
+
+.container:hover > .search__icon {
+  background-color: #eee;
+}
+
+
+.searxhin {
+  background-color: #c6c6c8;
+  border: 0;
+  height: 35px;
+  padding: 5px;
+  color: #000;
+  padding-left: 40px;
+  width: 100%;
+}
+
+span.search-icon {
+  color: black;
+  position: absolute;
+  left: 7px;
+  top: 6px;
+}
+
+.casnTb {
+  text-decoration: none;
+}
+
+.casinoMainDv {
+  background: #ddd;
+  padding: 3px;
 }
