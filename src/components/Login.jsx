@@ -114,7 +114,7 @@ function Login(props) {
                   onChange={handleChange}
                 />
                 <a className="eye" onClick={handleToggle}>
-                  {passwordVisible ? <img src={Eyeslash}/> : <img src={Eyefill}/>}
+                  {passwordVisible ? <img src={Eyefill}/> : <img src={Eyeslash}/>}
                 </a>
               </label>
               <p>{formErrors.password}</p>
