@@ -43,7 +43,6 @@ label {
 .id-join {
   width: 100%;
   text-align: center;
-  margin-top: 15px;
 }
 .msgId {
   font-weight: 700;
@@ -79,4 +78,15 @@ a.msgId {
   .input-search {
     width: 100%;
   }
+}
+
+
+.inpsearch {
+  padding: 6px 0px;
+  margin-top: 1px;
+  margin-right: 7px;
+}
+.captchanew {
+  display: flex;
+  padding-bottom: 10px;
 }

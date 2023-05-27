@@ -82,7 +82,7 @@ function Home() {
       <section id="testimonials" className="testimonials secpd">
         <div className="pad00">
           <Carousel interval={2000} loop="true" variant="dark">
-            {data.map((review) => {
+            {data?.map((review) => {
               return (
                 <Carousel.Item>
                   <img

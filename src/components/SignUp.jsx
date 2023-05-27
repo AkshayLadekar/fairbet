@@ -6,6 +6,8 @@ import "../css/signup.css";
 import { Routes, Route, useNavigate } from "react-router-dom";
 import Modal from "react-bootstrap/Modal";
 import Login from "./Login";
+import Eyeslash from "../images/eye-slash.svg";
+import Eyefill from "../images/eye-fill.svg";
 
 function SignUp(props) {
   const [modalShow4, setModalShow4] = useState(false);
@@ -26,6 +28,17 @@ function SignUp(props) {
     props.closeSignUp();
     e.preventDefault();
   }
+  const [passwordVisible, setPasswordVisible] = useState(false);
+
+  const handleToggle = () => {
+    setPasswordVisible(!passwordVisible);
+  };
+
+  const [passwordVisible1, setPasswordVisible1] = useState(false);
+
+  const handleToggle1 = () => {
+    setPasswordVisible1(!passwordVisible1);
+  };
 
   return (
     <Modal
@@ -150,7 +163,7 @@ function SignUp(props) {
                             id="mobile"
                             maxLength={10}
                             minLength={10}
-                            placeholder="10 Digit Phone No"
+                            placeholder="  Phone No"
                             type="text"
                             className="mobile1"
                           />
@@ -198,13 +211,17 @@ function SignUp(props) {
                         <div className="username-input pos">
                           <i className="fa fa-lock" />
                           <input
-                            className="pos"
+                            className="pass"
                             placeholder="Password"
-                            type="password"
+                            type={passwordVisible ? "text" : "password"}
                           />
-                          <span className="pPass rt-eye">
-                            <i aria-hidden="true" className="fa fa-eye-slash" />
-                          </span>
+                          <a className="eye1" onClick={handleToggle}>
+                            {passwordVisible ? (
+                              <img src={Eyefill} />
+                            ) : (
+                              <img src={Eyeslash} />
+                            )}
+                          </a>
                         </div>
                         <div className="clrBoth" />
                       </div>
@@ -213,12 +230,16 @@ function SignUp(props) {
                           <i aria-hidden="true" className="fa fa-lock" />
                           <input
                             placeholder="Confirm Password"
-                            type="password"
-                            className
+                            type={passwordVisible1 ? "text" : "password"}
+                            className="pass"
                           />
-                          <span className="rt-eye" id="cPass">
-                            <i aria-hidden="true" className="fa fa-eye-slash" />
-                          </span>
+                          <a className="eye1" onClick={handleToggle1}>
+                            {passwordVisible1 ? (
+                              <img src={Eyefill} />
+                            ) : (
+                              <img src={Eyeslash} />
+                            )}
+                          </a>
                         </div>
                         <div className="clrBoth" />
                       </div>
@@ -268,10 +289,7 @@ function SignUp(props) {
                       <div className="clrBoth" />
                     </div>
                     <div className="clrBoth" />
-                    <div
-                      onClick={Close2}
-                      className="alrdy-main"
-                    >
+                    <div onClick={Close2} className="alrdy-main">
                       <a className="alredy log-reg-btn">
                         {" "}
                         Already Have Account ? Log In{" "}

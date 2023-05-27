@@ -568,3 +568,14 @@ section.secLogin {
   height: 40px;
   margin-top: 10px;
 }
+
+a.eye1 {
+  float: right;
+  position: relative;
+  top: -30px;
+  right: 10px;
+}
+
+input.pass {
+  font-size: 12px;
+}

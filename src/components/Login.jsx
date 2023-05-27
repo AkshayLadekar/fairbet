@@ -3,15 +3,28 @@ import "../css/login.css";
 import Whatsapp from "../images/whatsapp-green.png";
 import Modal from "react-bootstrap/Modal";
 import SignUp from "./SignUp";
-import Eyeslash from "../images/eye-slash.svg"
-import Eyefill from "../images/eye-fill.svg"
-
+import Eyeslash from "../images/eye-slash.svg";
+import Eyefill from "../images/eye-fill.svg";
+import ClientCaptcha from "react-client-captcha";
+import "react-client-captcha/dist/index.css";
 
 function Login(props) {
   const intialValues = { username: "", email: "", password: "" };
   const [formValues, setFormValues] = useState(intialValues);
   const [formErrors, setFormErrors] = useState({});
   const [isSubmit, setIsSubmit] = useState(false);
+  const [captchaCode, setCaptchaCode] = useState("");
+  const [inputCaptchaCode, setInputCaptchaCode] = useState("");
+
+  let setCode = (chars) => {
+    setCaptchaCode(chars);
+  };
+
+  let setChange = (e) => {
+    e.preventDefault();
+    setInputCaptchaCode(e.target.value);
+  };
+
 
   const handleChange = (e) => {
     console.log(e.target);
@@ -58,15 +71,12 @@ function Login(props) {
 
   const [modalShow3, setModalShow3] = useState(false);
 
-  // const modalClose = () => {
-  //   setFormValues({ username: "", email: "", password: "" });
-  //   props.close();
-  // };
-
   const handleClose = () => {
     setFormValues({ username: "", email: "", password: "" });
     setModalShow3(false);
     props.onHide();
+    setInputCaptchaCode("");
+    setCaptchaCode("");
   };
 
   function modalClose(e) {
@@ -78,8 +88,6 @@ function Login(props) {
   const handleToggle = () => {
     setPasswordVisible(!passwordVisible);
   };
-
-
 
   return (
     <Modal
@@ -114,17 +122,58 @@ function Login(props) {
                   onChange={handleChange}
                 />
                 <a className="eye" onClick={handleToggle}>
-                  {passwordVisible ? <img src={Eyefill}/> : <img src={Eyeslash}/>}
+                  {passwordVisible ? (
+                    <img src={Eyefill} />
+                  ) : (
+                    <img src={Eyeslash} />
+                  )}
                 </a>
               </label>
               <p>{formErrors.password}</p>
+              <div className="captchanew">
+                <input
+                  onChange={(e) => {
+                    setChange(e);
+                  }}
+                  className="input-search inpsearch"
+                  placeholder="Enter Captcha"
+                  type="text"
+                />
+                <ClientCaptcha
+                  chars={
+                    "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+                  }
+                  captchaCode={(chars) => {
+                    setCode(chars);
+                  }}
+                />
+              </div>
+
               <label>Forget Password ?</label>
-              <button className="loginbtn mb-4" type="submit">
-                LOGIN
-              </button>
-              <button onClick={modalClose} className="loginbtn" type="submit">
-                DONT HAVE AN ACCOUNT?
-              </button>
+              <div className="btnss">
+                <button
+                  className="loginbtn mb-4"
+                  type="submit"
+                  onClick={() => {
+                    captchaCode === inputCaptchaCode
+                      ? alert("Successfull")
+                      : alert("Enter a Valid Captcha");
+                    setInputCaptchaCode("");
+                    setCaptchaCode("");
+                  }}
+                >
+                  LOGIN
+                </button>
+                <button
+                  style={{ marginLeft: "10px" }}
+                  onClick={modalClose}
+                  className="loginbtn"
+                  type="submit"
+                >
+                  SIGN UP
+                </button>
+              </div>
+
               <SignUp
                 closeSignUp={() => setModalShow3(false)}
                 show={modalShow3}
