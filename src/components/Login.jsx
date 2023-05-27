@@ -6,7 +6,7 @@ import SignUp from "./SignUp";
 import Eyeslash from "../images/eye-slash.svg";
 import Eyefill from "../images/eye-fill.svg";
 import ClientCaptcha from "react-client-captcha";
-import "react-client-captcha/dist/index.css";
+// import "react-client-captcha/dist/index.css";
 
 function Login(props) {
   const intialValues = { username: "", email: "", password: "" };
@@ -155,6 +155,7 @@ function Login(props) {
                   className="loginbtn mb-4"
                   type="submit"
                   onClick={() => {
+                    console.log("=================",captchaCode , inputCaptchaCode)
                     captchaCode === inputCaptchaCode
                       ? alert("Successfull")
                       : alert("Enter a Valid Captcha");
