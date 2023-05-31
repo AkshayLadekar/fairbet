@@ -6,7 +6,7 @@ import Twitter from "../images/twitter.png";
 import Instagram from "../images/instagram.png";
 import Satta from "../images/satta_m.svg";
 import Menus from "../images/mnu.png";
-import Home from "../images/home1.png";
+import Home from "../images/homewhite.png";
 import Casino from "../images/livecasino (1).svg";
 import Slots from "../images/slots.png";
 import "../css/footer.css";

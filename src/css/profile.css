@@ -18,6 +18,7 @@ html {
 }
 .acc-table {
   padding: 10px;
+  margin-top: 10px;
 }
 .accountDetail {
   width: 100%;
@@ -91,7 +92,7 @@ html {
 .white-form-dv {
   background-color: #fff;
   padding: 10px;
-  padding-bottom: 23px;
+  padding-bottom: 40px;
 }
 .top_menu ul li a {
   color: #ffffff;

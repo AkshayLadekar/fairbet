@@ -1,4 +1,4 @@
-body {
+/* body {
   background-color: #dddddd;
 }
 
@@ -36,8 +36,7 @@ body {
 #header .logo a span {
   color: #e03a3c;
 }
-#header .logo img {
-}
+
 .toggImg {
   width: 20px;
   height: auto;
@@ -46,7 +45,6 @@ body {
 #header .innrhd {
   position: fixed;
   z-index: 1000;
-  background-color: #191919;
   width: 100%;
   max-width: 100%;
   border-radius: 0;
@@ -240,7 +238,7 @@ img.userbtn {
   padding: 16px;
 }
 
-/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+
 @media screen and (max-height: 450px) {
   .sidebar {
     padding-top: 15px;
@@ -248,4 +246,4 @@ img.userbtn {
   .sidebar a {
     font-size: 18px;
   }
-}
+} */

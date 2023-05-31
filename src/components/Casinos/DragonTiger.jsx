@@ -1,6 +1,6 @@
 import React from "react";
-import Header from "../Header";
-import Footer from "../Footer";
+import Header from "../Header1";
+import Footer from "../Footer1";
 import { Navigate, useNavigate } from "react-router-dom";
 import { Container, Dropdown, DropdownButton } from "react-bootstrap";
 import Lobby from "../../images/lobby.jpg";
@@ -13,7 +13,7 @@ function DragonTiger() {
         <Header />
       </div>
       <div>
-        <form>
+        <form className="subforms">
           <div className="search-container">
             <input
               type="text"

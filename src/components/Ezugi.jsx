@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import Header from "./Header";
-import Footer from "./Footer";
+import Header from "./Header1";
+import Footer from "./Footer1";
 import Casinobet from "../images/fairbets-casino.png";
 import { Navigate, useNavigate } from "react-router-dom";
 import { Container, Dropdown, DropdownButton } from "react-bootstrap";
@@ -14,7 +14,7 @@ function Ezugi() {
         <Header />
       </div>
       <div>
-        <form>
+        <form className="subforms">
           <div className="search-container">
             <input
               type="text"

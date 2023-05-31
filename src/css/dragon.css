@@ -61,6 +61,10 @@
   }
   
   .casinnologo {
-    margin-top: 3rem;
+    margin-top: 0 !important;
+  }
+  
+  form.subforms {
+    margin-top: 50px;
   }
   

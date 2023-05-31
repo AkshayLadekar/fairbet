@@ -1,6 +1,6 @@
 import React from "react";
-import Header from "./Header";
-import Footer from "./Footer";
+import Header from "./Header1";
+import Footer from "./Footer1";
 import { Container, Dropdown, DropdownButton } from "react-bootstrap";
 import Casinobet from "../images/fairbets-casino.png";
 import "../css/slots.css"
@@ -12,7 +12,7 @@ function Slots() {
     <div>
       <Header />
       <div>
-        <form>
+        <form className="subforms">
           <div className="search-container">
             <input
               type="text"

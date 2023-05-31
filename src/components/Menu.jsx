@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "../css/menu.css";
-import Header from "./Header";
-import FooterSubMenu from "./FooterSubMenu";
+import Header from "./Header1";
 import Homemenu from "../images/home.svg";
 import Satta from "../images/poker-cards-4.png";
 import Casino from "../images/casino.svg";
@@ -21,8 +20,8 @@ import Support from "../images/support.png";
 import Support1 from "./Support";
 import Whatsapp from "../images/whatsapp-green.png";
 import Telegram from "../images/telegram-blue.png";
-
 import { Navigate, useNavigate } from "react-router-dom";
+import Footer1 from "./Footer1";
 
 function Menu() {
   const [modalFeedback, setModalFeedback] = useState(false);
@@ -272,7 +271,7 @@ function Menu() {
         </div>
       </div>
 
-      <FooterSubMenu />
+      <Footer1 />
     </>
   );
 }

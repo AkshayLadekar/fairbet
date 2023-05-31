@@ -30,6 +30,7 @@ import AmlPolicy from "./components/Page/AmlPolicy";
 import ResponsibleGaming from "./components/Page/ResponsibleGaming";
 import PrivacyPolicy from "./components/Page/PrivacyPolicy";
 import TermsNent from "./components/Page/TermsNent";
+import Home1 from "./components/Home1";
 
 function App() {
   const result = useSelector((state) => state.cartData);
@@ -43,7 +44,7 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home1 />} />
           <Route path="/menu" element={<Menu />} />
           <Route path="/casino" element={<Casino />} />
           <Route path="/login" element={<Login />} />

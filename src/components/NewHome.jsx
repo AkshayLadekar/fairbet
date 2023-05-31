@@ -1,7 +1,7 @@
 import React from "react";
-import Header from "./Header";
-import Home from "./Home";
-import Footer from "./Footer";
+import Header from "./Header1";
+import Home from "./Home1";
+import Footer from "./Footer1";
 
 function NewHome() {
   return (

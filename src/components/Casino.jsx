@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import Header from "./Header";
-import Footer from "./Footer";
+import Header from "./Header1";
+import Footer from "./Footer1";
 import Casinobet from "../images/fairbets-casino.png";
 import "../../src/css/casino.css";
 import { Navigate, useNavigate } from "react-router-dom";

@@ -1,5 +1,5 @@
-import Header from "./Header";
-import Footer from "./Footer";
+import Header from "./Header1";
+import Footer from "./Footer1";
 import ProfileFooter from "./ProfileFooter";
 import React, { useState } from "react";
 import "../css/profile.css";

@@ -114,6 +114,7 @@ function Login(props) {
               </label>
               <label>
                 Password:
+                <br/>
                 <input
                   type={passwordVisible ? "text" : "password"}
                   className="input-search"

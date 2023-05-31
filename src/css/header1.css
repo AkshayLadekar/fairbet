@@ -1,0 +1,178 @@
+#header {
+  transition: all 0.5s;
+  z-index: 997;
+  padding: 0 !important;
+}
+#header .logo {
+  font-size: 30px;
+  margin: 0;
+  padding: 0;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+}
+#header .logo a {
+  color: #111111;
+}
+#header .logo a span {
+  color: #e03a3c;
+}
+#header .innrhd {
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  max-width: 100%;
+  border-radius: 0;
+}
+
+.fixed-top {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+  background-color: #0e0e0e !important;
+  height: 85px;
+  color: #fff;
+}
+
+.clrBoth {
+  width: 100%;
+  height: 0;
+  line-height: 0;
+  clear: both;
+}
+
+.logo a img {
+  width: 200px;
+  margin: 15px 20px;
+}
+
+.tpDV {
+  text-align: center;
+  display: block;
+  width: 100%;
+  -webkit-box-shadow: -2px 9px 5px -3px rgba(0, 0, 0, 0.86);
+  -moz-box-shadow: -2px 9px 5px -3px rgba(0, 0, 0, 0.86);
+  box-shadow: -2px 9px 5px -3px rgba(0, 0, 0, 0.86);
+  margin-bottom: 5px;
+}
+.tpDV p {
+  margin-bottom: 0px;
+  margin-top: 0;
+}
+
+.tpNv.active {
+  border-bottom: 2px solid #876ac5;
+}
+
+.tpNv {
+  text-align: center;
+  display: inline;
+  width: 100%;
+  text-decoration: none;
+  padding: 0 8px;
+  color: #fff;
+  font-size: 14px;
+}
+
+.wlogo {
+  width: 210px;
+  height: auto;
+  margin-left: 15px;
+}
+.log-Main {
+  text-align: right;
+}
+a.log {
+  color: #9062d2;
+}
+.log-Main a {
+  font-size: 16px;
+  margin: 0 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+a.sign {
+  color: #fff;
+}
+.get-started-btn {
+  margin-left: 30px;
+  background: #dddddd;
+  color: #fff;
+  border-radius: 4px !important;
+  padding: 8px 25px;
+  white-space: nowrap;
+  transition: 0.3s;
+  font-size: 14px;
+  font-weight: 600;
+  display: inline-block;
+  text-decoration: none;
+  background: linear-gradient(to right, #436ad8 0, #b264b9 100%) !important;
+}
+img.depositbtn {
+  width: 15px;
+  margin-right: 5px;
+  margin-top: -4px;
+}
+img.userbtn {
+  width: 15px;
+  margin-right: 5px;
+  margin-top: -2px;
+}
+.lloginBTn {
+  background: linear-gradient(to right, #436ad8 0, #b264b9 100%) !important;
+  border-radius: 3px !important;
+  border: 0;
+  color: #fff !important;
+}
+
+@media (max-width: 1200px) {
+  a.log {
+    background: linear-gradient(to right, #436ad8 0, #b264b9 100%) !important;
+    border-radius: 0 !important;
+    border: 0;
+    color: #fff !important;
+    margin: 0 4px 0 0;
+    padding: 7px 9px;
+    font-size: 11px;
+  }
+  a.sign {
+    margin: 0 4px 0 0;
+    padding: 7px 9px;
+    font-size: 11px;
+    border-radius: 0;
+    background: #dddddd;
+    color: #000;
+    font-weight: 600;
+    display: inline-block;
+    padding-bottom: 5px;
+  }
+  .tpDV {
+    margin-bottom: 15px;
+  }
+  .logo a img {
+    width: 145px;
+    margin: 0;
+  }
+}
+@media (max-width: 992px) {
+  .get-started-btn {
+    margin: 0 4px 0 0;
+    padding: 6px 9px !important;
+    font-size: 11px;
+    font-size: 11px;
+    border-radius: 0;
+  }
+}
+
+@media (max-width: 440px) {
+  .wlogo {
+    width: 155px;
+  }
+}
+
+@media (max-width: 380px) {
+  .wlogo {
+    width: 140px;
+  }
+}

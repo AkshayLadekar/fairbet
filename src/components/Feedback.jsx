@@ -1,6 +1,7 @@
 import React from "react";
-import Header from "./Header";
-import FooterSubMenu from "./FooterSubMenu";
+import Header from "./Header1";
+// import FooterSubMenu from "./FooterSubMenu";
+import Footer1 from "./Footer1";
 import "../css/feedback.css";
 
 function Feedback() {
@@ -52,7 +53,7 @@ function Feedback() {
         </div>
 
         <div>
-          <FooterSubMenu />
+          <Footer1 />
         </div>
       </div>
     </>
