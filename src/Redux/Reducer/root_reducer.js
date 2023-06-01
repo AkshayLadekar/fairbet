@@ -1,5 +1,5 @@
 import { combineReducers } from "redux";
-import { cartData } from "./reducer";
+import { selectState } from "./reducer";
 export default combineReducers({
-  cartData: cartData,
+  selectState: selectState,
 });

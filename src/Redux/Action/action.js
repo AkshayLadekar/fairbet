@@ -18,11 +18,18 @@ removeFromCart:()=>{
         type:constant.romove_from_cart,
         data:"data removed from cart"
     }
+},
+getStateList:()=>{
+    console.log("action called get state")
+    return {
+        type:constant.get_state_list,
+    }
+},
+setStateList:(data)=>{
+    console.log("action called set state")
+    return {
+        type:constant.get_state_list,
+        data:data
+    }
 }
-// setTodoList:(data)=>{
-//     return {
-//         type:constant.set_todo_list,
-//         data:data
-//     }
-// }
 }

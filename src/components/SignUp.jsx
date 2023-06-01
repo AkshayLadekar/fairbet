@@ -4,10 +4,16 @@ import F2 from "../images/fi2.png";
 import F6 from "../images/fi6.png";
 import "../css/signup.css";
 import { Routes, Route, useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 import Modal from "react-bootstrap/Modal";
 import Login from "./Login";
 import Eyeslash from "../images/eye-slash.svg";
 import Eyefill from "../images/eye-fill.svg";
+import action from "../Redux/Action/action";
+import constants from '../Redux/constant'
+import helper from "../helper";
+
 
 function SignUp(props) {
   const [modalShow4, setModalShow4] = useState(false);
@@ -15,7 +21,14 @@ function SignUp(props) {
     setModalShow4(false);
     props.onHide();
   };
-
+  const dispatch = useDispatch();
+  const result = useSelector((state) => state.selectState[0]);
+  const data = result? helper.Decryption(result):null
+  if(data){
+    console.log("=====>console1",data)
+    console.log("=====>console2",JSON.parse(JSON.stringify(data)))
+    //console.log("=====>console3",data)
+  }
   const navigate = useNavigate();
 
   const navigateToHome = () => {
@@ -178,7 +191,10 @@ function SignUp(props) {
                     <div className="row">
                       <div className="col-6">
                         <div className="username-input">
-                          <select
+                        <select
+                          onClick={()=>{
+                            dispatch(action.getStateList())
+                          }}
                             className="form-select"
                             style={{ "border-bottom": "0px !important" }}
                           >
