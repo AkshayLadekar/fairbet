@@ -36,22 +36,46 @@ function Header1(props) {
     navigate("/profile");
   };
 
+
   return (
     <div>
       <header id="header" className="fixed-top header-inner-pages">
-      <div className="tpDV">
-              <p>
-                <a href="/dashboard" className="tpNv active">
-                  Exchange
-                </a>
-                <a href="/casino" className="tpNv">
-                  Live casino
-                </a>
-                <a href="/satta" className="tpNv">
-                  Satta Matka
-                </a>
-              </p>
-            </div>
+        <div className="tpDV">
+          <p>
+            <a href="/dashboard" className="tpNv" style={{
+                borderBottom:
+                  window.location.pathname === "/dashboard"
+                    ? "2px solid #876ac5"
+                    : "none",
+              }}>
+              Exchange
+            </a>
+            <a
+              href="/casino"
+              className="tpNv"
+              style={{
+                borderBottom:
+                  window.location.pathname === "/casino"
+                    ? "2px solid #876ac5"
+                    : "none",
+              }}
+            >
+              Live casino
+            </a>
+            <a
+              href="/satta"
+              className="tpNv"
+              style={{
+                borderBottom:
+                  window.location.pathname === "/satta"
+                    ? "2px solid #876ac5"
+                    : "none",
+              }}
+            >
+              Satta Matka
+            </a>
+          </p>
+        </div>
         {isNotLogin ? (
           <div className="container align-items-center justify-content-between">
             <div className="clrBoth" />
@@ -95,15 +119,13 @@ function Header1(props) {
             </div>
           </div>
         ) : (
-          
           <div className="container d-flex align-items-center innrhd">
-            
             <div className="logo me-auto">
               <a href="/">
                 <img src={Logo} />
               </a>
             </div>
-            
+
             <a
               onClick={() => setShowDeposite(true)}
               href="#"
