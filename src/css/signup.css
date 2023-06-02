@@ -579,6 +579,14 @@ a.eye1 {
 input.pass {
   font-size: 12px;
 }
+.error {
+  color: red;
+  font-size: 10px;
+}
+.error1 {
+  color: black;
+  font-size: 15px;
+}
 
 @media (max-width: 1200px) {
   a.eye1 {

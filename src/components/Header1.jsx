@@ -42,9 +42,9 @@ function Header1(props) {
       <header id="header" className="fixed-top header-inner-pages">
         <div className="tpDV">
           <p>
-            <a href="/dashboard" className="tpNv" style={{
+            <a href="#" className="tpNv" style={{
                 borderBottom:
-                  window.location.pathname === "/dashboard"
+                  window.location.pathname === "#"
                     ? "2px solid #876ac5"
                     : "none",
               }}>

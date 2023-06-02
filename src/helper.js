@@ -13,7 +13,6 @@ export default {
       .encrypt(string, key, { iv: iv, padding: padZeroPadding })
       .toString();
 
-    console.log("==========>", encrypted);
     return encrypted;
 
     //Encrypted string
@@ -36,11 +35,6 @@ const ZeroPadding = require("crypto-js/pad-zeropadding");
       iv: iv,
       padding: ZeroPadding,
     }).toString(CryptoJS.enc.Utf8);
-    // let string = `${decrypted}`
-    // let decryptedObject = eval('(' + string + ')');
-    // //let decryptedObject = JSON.parse(string);
-    console.log("=======>1",decrypted)
-    console.log("=======>2",typeof decrypted)
     return decrypted;
   },
 };

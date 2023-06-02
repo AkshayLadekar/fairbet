@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import F1 from "../images/fi1.png";
 import F2 from "../images/fi2.png";
 import F6 from "../images/fi6.png";
@@ -11,24 +11,78 @@ import Login from "./Login";
 import Eyeslash from "../images/eye-slash.svg";
 import Eyefill from "../images/eye-fill.svg";
 import action from "../Redux/Action/action";
-import constants from '../Redux/constant'
+import constants from "../Redux/constant";
 import helper from "../helper";
-
+import axios from "axios";
 
 function SignUp(props) {
   const [modalShow4, setModalShow4] = useState(false);
+  const [dataArray, setDataArray] = useState([]);
+  const [checkUser, setCheckUser] = useState([]);
+  const [emailExist, setEmailExist] = useState(false);
+  const [email, setEmail] = useState("");
+  const [isValid, setIsValid] = useState(true);
+
+  const handleChangeEmail = (e) => {
+    const inputEmail = e.target.value;
+    setEmail(inputEmail);
+    setIsValid(validateEmail(inputEmail));
+  };
+
+  const validateEmail = (email) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
   const handleClose = () => {
     setModalShow4(false);
     props.onHide();
   };
+
   const dispatch = useDispatch();
   const result = useSelector((state) => state.selectState[0]);
-  const data = result? helper.Decryption(result):null
-  if(data){
-    console.log("=====>console1",data)
-    console.log("=====>console2",JSON.parse(JSON.stringify(data)))
-    //console.log("=====>console3",data)
-  }
+  useEffect(() => {
+    let config = {
+      method: "get",
+      maxBodyLength: Infinity,
+      url: "http://3.1.242.135/api/auth/getStateList",
+      headers: {},
+    };
+    axios
+      .request(config)
+      .then((response) => {
+        var data = response.data.data;
+        setDataArray(data);
+      })
+      .catch((error) => {});
+
+    let data1 = JSON.stringify({
+      email: "9755348052p@gmail.com",
+    });
+
+    let config1 = {
+      method: "post",
+      maxBodyLength: Infinity,
+      url: "http://3.1.242.135/api/auth/userexistornot",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      data: data1,
+    };
+
+    axios
+      .request(config1)
+      .then((response) => {
+        var data2 = response.data.message;
+        console.log("++++++++===================", data2);
+        setCheckUser(data2);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
+
+  const getState = async (e) => {};
   const navigate = useNavigate();
 
   const navigateToHome = () => {
@@ -51,6 +105,11 @@ function SignUp(props) {
 
   const handleToggle1 = () => {
     setPasswordVisible1(!passwordVisible1);
+  };
+
+  const emailCheck = () => {
+    console.log("!checkUser", !checkUser);
+    !checkUser ? alert("Email Available") : setEmailExist(false);
   };
 
   return (
@@ -149,7 +208,7 @@ function SignUp(props) {
                         <div className="username-input">
                           <input
                             id="username"
-                            placeholder="username"
+                            placeholder="Username"
                             type="text"
                             className=" "
                           />
@@ -162,8 +221,14 @@ function SignUp(props) {
                             id="email"
                             placeholder="Email"
                             type="email"
-                            className="  ng-valid"
+                            onChange={handleChangeEmail}
+                            className={isValid ? "" : "invalid"}
                           />
+                          {!isValid && (
+                            <span className="error">
+                              Please enter a valid email.
+                            </span>
+                          )}
                         </div>
                         <div className="clrBoth" />
                       </div>
@@ -190,11 +255,13 @@ function SignUp(props) {
                     </div>
                     <div className="row">
                       <div className="col-6">
-                        <div className="username-input">
-                        <select
-                          onClick={()=>{
-                            dispatch(action.getStateList())
+                        <div
+                          className="username-input"
+                          onClick={(e) => {
+                            getState(e);
                           }}
+                        >
+                          <select
                             className="form-select"
                             style={{ "border-bottom": "0px !important" }}
                           >
@@ -202,7 +269,13 @@ function SignUp(props) {
                               {" "}
                               Select State{" "}
                             </option>
-                            <option value={1}>Andhra Pradesh</option>
+                            {dataArray?.map((review) => {
+                              return (
+                                <option value={1}>
+                                  {helper.Decryption(review.name)}
+                                </option>
+                              );
+                            })}
                           </select>
                         </div>
                         <div className="clrBoth" />
