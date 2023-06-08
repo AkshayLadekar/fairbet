@@ -248,7 +248,7 @@ html {
   background: -webkit-linear-gradient(left, #436ad8 0%, #b264b9 100%);
   background: linear-gradient(to right, #436ad8 0%, #b264b9 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#436ad8', endColorstr='#b264b9',GradientType=1 );
-  margin: 4px;
+  margin: 5px;
   border: 0;
   padding: 10px;
   border-radius: 5px;
