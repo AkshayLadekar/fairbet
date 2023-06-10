@@ -6,6 +6,14 @@ form {
   max-width: 400px;
 }
 
+.modal-header {
+  font-weight: 600;
+}
+
+.modal-body {
+  padding: 0;
+}
+
 label {
   display: flex;
   flex-direction: column;
@@ -72,6 +80,15 @@ a.msgId {
     top: -35px;
     right: 10px;
   }
+  .row-mr .col {
+    padding: 0 4px !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .row-mr .col {
+    padding: 0 70px !important;
+  }
 }
 
 @media only screen and (max-width: 600px) {
@@ -97,4 +114,5 @@ a.msgId {
 .captchanew {
   display: flex;
   padding-bottom: 10px;
+  margin-top: -1rem;
 }

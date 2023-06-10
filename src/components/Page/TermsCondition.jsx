@@ -1,7 +1,7 @@
 import React from "react";
 import "../../css/termscondition.css";
-import Header from "../Header";
-import Footer from "../Footer";
+import Header from "../Header1";
+import Footer from "../Footer1";
 
 function TermsCondition() {
   return (

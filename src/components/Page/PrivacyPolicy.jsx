@@ -1,6 +1,6 @@
 import React from "react";
-import Header from "../Header";
-import Footer from "../Footer";
+import Header from "../Header1";
+import Footer from "../Footer1";
 import "../../css/termscondition.css";
 
 function PrivacyPolicy() {

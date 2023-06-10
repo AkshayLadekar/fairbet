@@ -26,17 +26,24 @@ import Pcd from "../images/pcd.png";
 import Footer1 from "./Footer1";
 import Leaf from "../images/new-home-images/leaf.png";
 import Ez from "../images/new-home-images/ez.png";
+import { Api } from "../Api";
 
 function Home1() {
   const [data, setData] = useState([]);
-
   const [modalShow1, setModalShow1] = useState(false);
+  const [login, setLogin] = useState(false);
+  const [iframeVisible, setIframeVisible] = useState(false);
+  const [topGame1, setTopGame1] = useState([]);
   const navigate = useNavigate();
 
   const navigateToSatta = () => {
     navigate("/satta");
   };
 
+  const handleImageClick = () => {
+  console.log("==========>123456",iframeVisible)
+    setIframeVisible(true);
+  };
   const navigateToCasino = () => {
     navigate("/casino");
   };
@@ -48,25 +55,48 @@ function Home1() {
   useEffect(() => {
     const postData = async () => {
       try {
+        topGames();
+
         const response = await axios.get(
-          "https://fairbets.co/api/v1/getBanner"
-          // {
-          //   limit: 10,
-          //   pageno: 1,
-          // }
+          "https://dpboss.deals/api/auth/getBanner"
         );
         setData(response.data.data);
-        // console.log("==================>", data);
       } catch (error) {
         console.error(error);
       }
     };
+
+    const topGames = async () => {
+      let data = JSON.stringify({ game_name: "top-games", page: "1" });
+      let config = {
+        method: "post",
+        maxBodyLength: Infinity,
+        url: "https://dpboss.deals/api/auth/getCasinoMatches",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        data: data,
+      };
+      axios
+        .request(config)
+        .then((response) => {
+          var data = response.data.data;
+          setTopGame1(data);
+        })
+        .catch((error) => {
+          return error;
+        });
+    };
+
     postData();
   }, []);
 
+  useEffect(() => {}, [topGame1]);
+
   return (
     <>
-      <Header1 />
+      <Header1 login={login} />
       <section id="testimonials" className="testimonials secpd">
         <div className="container pad00">
           <div className="row justify-content-center">
@@ -142,8 +172,25 @@ function Home1() {
               <div className="repete-imag">
                 <div className="row md-rwo tps colsp crvimgrst">
                   <div className="col-6 crvimg ">
-                    <div className="member-img">
+                    <div
+                      className="member-img"
+                      onBlur={() => {
+                        setLogin(false);
+                      }}
+                      onClick={() => {
+                        setLogin(true);
+                        handleImageClick();
+                      }}
+                    >
                       <img src={Exchange} className="img-fluid" alt="" />
+                      {iframeVisible && (
+                        <iframe
+                          src="https://www.google.com"
+                          width="500"
+                          height="300"
+                          title="IFrame"
+                        />
+                      )}
                     </div>
                     <div>
                       <div className="evol">
@@ -161,7 +208,15 @@ function Home1() {
                     </div>
                   </div>
                   <div className="col-6 crvimg">
-                    <div onClick={navigateToSatta} className="member-img">
+                    <div
+                      onClick={() => {
+                        setLogin(true);
+                      }}
+                      onBlur={() => {
+                        setLogin(false);
+                      }}
+                      className="member-img"
+                    >
                       <img src={Tp6} className="img-fluid" alt="" />
                     </div>
                     <div onClick={navigateToCasino} className="member-img">
@@ -189,6 +244,38 @@ function Home1() {
               </div>
               <div className="repete-imag">
                 <div className="row md-rwo tps1 colsp crvimgrst indTp">
+                  {topGame1?.map((review) => {
+                    var imgs = `https://fairbets.co/assets/casino_images/${review.ImageFullPath}`;
+                    return (
+                      <div className="col-4 crvimg">
+                        <div className="member-img">
+                          <img
+                            src={`https://fairbets.co/assets/casino_images/${review.ImageFullPath}`}
+                            className="img-fluid"
+                            alt=""
+                          />
+                        </div>
+                      </div>
+                    );
+                  })}
+
+                  {data?.map((review) => {
+                    return (
+                      <Carousel.Item>
+                        <img
+                          className="d-flex w-100"
+                          src={review.banner_image}
+                          alt="First slide"
+                        />
+                      </Carousel.Item>
+                    );
+                  })}
+                  {/* <div className="col-4 crvimg">
+                    <div className="member-img">
+                      <img src={Pcd} className="img-fluid" alt="icon-image" />
+                    </div>
+                  </div>
+
                   <div className="col-4 crvimg">
                     <div className="member-img">
                       <img src={Pcd} className="img-fluid" alt="" />
@@ -208,17 +295,7 @@ function Home1() {
                     <div className="member-img">
                       <img src={Pcd} className="img-fluid" alt="" />
                     </div>
-                  </div>
-                  <div className="col-4 crvimg">
-                    <div className="member-img">
-                      <img src={Pcd} className="img-fluid" alt="" />
-                    </div>
-                  </div>
-                  <div className="col-4 crvimg">
-                    <div className="member-img">
-                      <img src={Pcd} className="img-fluid" alt="" />
-                    </div>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>

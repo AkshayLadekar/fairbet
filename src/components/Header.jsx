@@ -22,7 +22,7 @@ import {Routes, Route, useNavigate} from 'react-router-dom';
 function Header(props) {
   const [modalShowLogin, setModalShowLogin] = useState(false);
   const [modalShowSignUp, setModalShowSignUp] = useState(false);
-  const [isNotLogin, setIsNotLogin] = useState(false);
+  const [isNotLogin, setIsNotLogin] = useState(true);
   const [showDepositeComponent, setshowDepositeComponent] = useState(true);
   const [showUpi, setShowUpi] = useState(false);
   const [showDeposite, setShowDeposite] = useState(false);
@@ -39,6 +39,7 @@ function Header(props) {
   return (
     <div>
       <header id="header" className="fixed-top d-flex align-items-center">
+        <>
         {isNotLogin ? (
           <div className="container d-flex align-items-center innrhd">
             <div className="logo me-auto">
@@ -446,6 +447,7 @@ function Header(props) {
             </a>
           </div>
         )}
+        </>
       </header>
     </div>
   );

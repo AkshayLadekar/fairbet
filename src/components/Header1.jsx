@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Logo from "../images/logo.png";
 import "../css/header1.css";
 import Login from "./Login";
@@ -18,17 +18,58 @@ import next from "../images/next-2.png";
 import iconDeposit from "../images/bank-2.png";
 import userIcon from "../images/user-interface-2.png";
 import { Routes, Route, useNavigate } from "react-router-dom";
+import Cookies from "universal-cookie";
+import jwtDecode from "jwt-decode";
+import axios from "axios";
 
 function Header1(props) {
   const [modalShowLogin, setModalShowLogin] = useState(false);
   const [modalShowSignUp, setModalShowSignUp] = useState(false);
-  const [isNotLogin, setIsNotLogin] = useState(false);
+  const [isNotLogin, setIsNotLogin] = useState(true);
   const [showDepositeComponent, setshowDepositeComponent] = useState(true);
   const [showUpi, setShowUpi] = useState(false);
   const [showDeposite, setShowDeposite] = useState(false);
   const [showUpiButton, setShowUpiButton] = useState(true);
   const [showUpiIcons, setShowUpiIcons] = useState(false);
   const [showPayment, setShowPayment] = useState(false);
+  const [showAmount, setShowAmount] = useState("");
+  const [getData, setGetData] = useState([]);
+
+  const cookies = new Cookies();
+
+  const handleSubmitAmount = () => {
+    if (showAmount < 300) {
+      <small className="min-depo">"Please enter minimum amount 300.</small>;
+      if (showAmount < 50000) {
+        <small className="min-depo">Please enter maximum amount 50000.</small>;
+      }
+    }
+  };
+
+  const getWayData = () => {
+    let config = {
+      method: "get",
+      maxBodyLength: Infinity,
+      url: "https://dpboss.deals/api/auth/getGetWayData",
+      headers: {},
+    };
+
+    axios
+      .request(config)
+      .then((response) => {
+        setGetData(response.data.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
+  useEffect(() => {
+    getWayData();
+  }, []);
+  useEffect(() => {
+    console.log("getdata", getData);
+  }, [getData]);
 
   const navigate = useNavigate();
 
@@ -36,18 +77,66 @@ function Header1(props) {
     navigate("/profile");
   };
 
+  const navigateToHome = () => {
+    navigate("/");
+  };
+  console.log("========>", props.login);
+  useEffect(() => {
+    console.log("=========>1", props.login);
+    setModalShowLogin(props.login);
+  }, [props.login]);
+
+  useEffect(() => {
+    const b = cookies.get("jwt-authorization");
+    if (b) {
+      setIsNotLogin(false);
+    }
+  }, [cookies.get("jwt-authorization")]);
+
+  useEffect(() => {}, [isNotLogin]);
+
+  const handleShowAmount = (e) => {
+    setShowAmount(e.target.value);
+  };
+
+  const handleClick = (value) => {
+    setShowAmount(value);
+  };
+  console.log("========>", props.login);
+  useEffect(() => {
+    console.log("=========>1", props.login);
+    setModalShowLogin(props.login);
+  }, [props.login]);
+
+  useEffect(() => {
+    const b = cookies.get("jwt-authorization");
+    if (b) {
+      setIsNotLogin(false);
+    }
+  }, [cookies.get("jwt-authorization")]);
+
+  useEffect(() => {}, [isNotLogin]);
 
   return (
     <div>
       <header id="header" className="fixed-top header-inner-pages">
         <div className="tpDV">
           <p>
-            <a href="#" className="tpNv" style={{
+            <a
+              href="/exchange"
+              className="tpNv"
+              onClick={() => {
+                console.log("=========> clicked",)
+              //setModalShowLogin(true)
+              }
+            }
+              style={{
                 borderBottom:
                   window.location.pathname === "#"
                     ? "2px solid #876ac5"
                     : "none",
-              }}>
+              }}
+            >
               Exchange
             </a>
             <a
@@ -63,6 +152,7 @@ function Header1(props) {
               Live casino
             </a>
             <a
+              onClick={() => setModalShowLogin(true)}
               href="/satta"
               className="tpNv"
               style={{
@@ -83,7 +173,7 @@ function Header1(props) {
               <div className="col-xl-12">
                 <div className="row">
                   <div className="col-lg-3 col-md-3 col-3 icon-box">
-                    <div className="icon">
+                    <div className="icon" onClick={navigateToHome}>
                       <img className="wlogo" src={Logo} />
                     </div>
                   </div>
@@ -162,7 +252,7 @@ function Header1(props) {
                     className="nav nav-tabs justify-content-center"
                     role="tablist"
                   >
-                    <li className="active">
+                    <li className={showDepositeComponent ? "active1" : ""}>
                       <a
                         className="active show"
                         data-toggle="tab"
@@ -181,7 +271,7 @@ function Header1(props) {
                         </span>
                       </a>
                     </li>
-                    <li>
+                    <li className={!showDepositeComponent ? "active1" : ""}>
                       <a
                         className
                         data-toggle="tab"
@@ -214,7 +304,7 @@ function Header1(props) {
                             className="type nav nav-tabs justify-content-center auto-nner"
                             role="tablist"
                           >
-                            <li className="active">
+                            <li className="active1">
                               <a
                                 className="active show"
                                 data-toggle="tab"
@@ -264,6 +354,25 @@ function Header1(props) {
                               <div>
                                 <ul className="paymentlist imgsize">
                                   <li>
+                                    {getData?.map((review) => {
+                                      return (
+                                        <>
+                                          {review.status === 1 ? (
+                                            <img
+                                              onClick={() => {
+                                                setShowPayment(true);
+                                                setShowUpi(false);
+                                              }}
+                                              className="ist-img"
+                                              src={a2z}
+                                            />
+                                          ) : (
+                                            <></>
+                                          )}
+                                        </>
+                                      );
+                                    })}
+
                                     <img
                                       onClick={() => {
                                         setShowPayment(true);
@@ -314,26 +423,47 @@ function Header1(props) {
                                       id="Amount"
                                       placeholder="Amount"
                                       type="number"
+                                      value={showAmount}
+                                      onChange={handleShowAmount}
                                     />
                                     <small className="min-depo">
-                                      {" "}
-                                      You can deposit minimum 300.
+                                      {(showAmount < 300) & (showAmount > 0)
+                                        ? "Please enter minimum amount 300."
+                                        : ""}
+                                      {showAmount > 50000
+                                        ? "Please enter maximum amount 50000."
+                                        : ""}
                                     </small>
                                   </div>
                                   <div className="amtmain amtd justify-content-center">
-                                    <span className="btn btn-primary am">
+                                    <span
+                                      onClick={() => handleClick("300")}
+                                      className="btn btn-primary am"
+                                    >
                                       300
                                     </span>
-                                    <span className="btn btn-primary am">
+                                    <span
+                                      onClick={() => handleClick("500")}
+                                      className="btn btn-primary am"
+                                    >
                                       500
                                     </span>
-                                    <span className="btn btn-primary am">
+                                    <span
+                                      onClick={() => handleClick("1000")}
+                                      className="btn btn-primary am"
+                                    >
                                       1000
                                     </span>
-                                    <span className="btn btn-primary am">
+                                    <span
+                                      onClick={() => handleClick("2000")}
+                                      className="btn btn-primary am"
+                                    >
                                       2000
                                     </span>
-                                    <span className="btn btn-primary am">
+                                    <span
+                                      onClick={() => handleClick("5000")}
+                                      className="btn btn-primary am"
+                                    >
                                       5000
                                     </span>
                                   </div>
@@ -368,6 +498,7 @@ function Header1(props) {
                                       setShowPayment(false);
                                       setShowUpiIcons(false);
                                       setShowUpiButton(true);
+                                      setShowAmount("");
                                     }}
                                   >
                                     Back
@@ -376,6 +507,7 @@ function Header1(props) {
                                     className="sbBtn"
                                     id="gtm-login_button"
                                     type="submit"
+                                    onClick={handleSubmitAmount}
                                   >
                                     {" "}
                                     Submit{" "}
@@ -446,31 +578,34 @@ function Header1(props) {
                                 Cancel Withdraw Requests
                               </a>
                             </form>
-                            <p className="point">
-                              {" "}
-                              1)If withdrawal accounts of 2 or more ID are same
-                              both IDs will be blocked{" "}
-                            </p>
-                            <p className="point">
-                              {" "}
-                              2)If two IDs have same IP both IDs will be blocked{" "}
-                            </p>
-                            <p className="point">
-                              {" "}
-                              3)Bonus should be wagered @5x before you can
-                              withdraw it{" "}
-                            </p>
-                            <p className="point">
-                              {" "}
-                              4)If betting pattern of 2 IDs is same both will be
-                              blocked{" "}
-                            </p>
-                            <p className="point">
-                              {" "}
-                              5)Do not put withdrawal request without depositing
-                              such request Will be categorised as suspicious
-                              activities{" "}
-                            </p>
+                            <div className="withdraw-size">
+                              <p className="point">
+                                {" "}
+                                1)If withdrawal accounts of 2 or more ID are
+                                same both IDs will be blocked.{" "}
+                              </p>
+                              <p className="point">
+                                {" "}
+                                2)If two IDs have same IP both IDs will be
+                                blocked.{" "}
+                              </p>
+                              <p className="point">
+                                {" "}
+                                3)Bonus should be wagered @5x before you can
+                                withdraw it.{" "}
+                              </p>
+                              <p className="point">
+                                {" "}
+                                4)If betting pattern of 2 IDs is same both will
+                                be blocked.{" "}
+                              </p>
+                              <p className="point">
+                                {" "}
+                                5)Do not put withdrawal request without
+                                depositing such request Will be categorised as
+                                suspicious activities.{" "}
+                              </p>
+                            </div>
                           </div>
                         </div>
                       </div>

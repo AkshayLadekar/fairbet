@@ -15,10 +15,21 @@ import UserImg from "../images/user_default.png";
 import Whatsapp from "../images/whatsapp-green.png";
 import Telegram from "../images/telegram-blue.png";
 import Deposite from '../components/Deposite'
+import Withdraw from "./withdraw";
+import Cookies from "universal-cookie";
+import jwtDecode from "jwt-decode";
+import { Routes, Route, useNavigate } from "react-router-dom";
 
 function Profile() {
   const [showModal, setShowModal] = useState(false);
   const [modalShowSignUp, setModalShowSignUp] = useState(false);
+  const cookies = new Cookies();
+
+  const navigate = useNavigate();
+  const navigateToHome = () => {
+    navigate('/');
+
+  };
   return (
     <div>
       <Header />
@@ -69,7 +80,7 @@ function Profile() {
                     </span>
                   </td>
                 </tr>
-                <Deposite show={showModal}  onHide={()=>{setShowModal(false)}}></Deposite>
+                <Withdraw show={showModal}  onHide={()=>{setShowModal(false)}}></Withdraw>
               </tbody>
             </table>
           </div>
@@ -128,7 +139,10 @@ function Profile() {
               </li>
             </ul>
             <div className="logou-bx text-center">
-              <button className="btn btn-red brocure" type="button">
+              <button onClick={()=>{
+                cookies.remove("jwt-authorization")
+                navigateToHome()
+              }} className="btn btn-red brocure" type="button">
                 {" "}
                 Logout
                 <span />

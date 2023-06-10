@@ -172,8 +172,7 @@ section.secLogin {
   color: #fff;
 }
 .row-mr .col {
-  padding-right: 8px;
-  padding-left: 8px;
+  padding: 0 4px;
 }
 .or-sep {
   color: #fff;
@@ -226,6 +225,13 @@ section.secLogin {
   margin-top: 20px !important;
 }
 
+.error3 {
+  color: red;
+  font-size: 18px;
+  float: right;
+  margin-top: -12px;
+}
+
 /**************************/
 .otpDv {
   float: right;
@@ -246,7 +252,7 @@ section.secLogin {
 .secLogin input {
   width: 84%;
   font-size: 14px;
-  font-weight: 300;
+  font-weight: 400;
   padding: 7px 0;
   border: none;
   background-color: inherit;
@@ -256,7 +262,7 @@ section.secLogin {
   outline: 0;
 }
 .secLogin .preno {
-  padding-right: 0;
+  padding-right: 3px;
   font-style: normal;
 }
 .loBTm {
@@ -366,6 +372,13 @@ section.secLogin {
 }
 .mobile1 {
   width: 77% !important;
+}
+
+.otpbtn {
+  padding: 0 5px !important;
+  margin-top: 9px !important;
+  background: linear-gradient(to right, #436ad8 0%, #b264b9 100%) !important;
+  border: 0 !important;
 }
 
 @media only screen and (max-device-width: 290px) {

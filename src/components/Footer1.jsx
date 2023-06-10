@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../css/footer1.css";
 import Envolope from "../images/envolop.png";
 import Whatsapp from "../images/whatsapp-green.png";
@@ -13,9 +13,12 @@ import Homeicon from "../images/homewhite.png";
 import Casino from "../images/livecasino (1).svg";
 import Slots from "../images/slots.png";
 import { Routes, Route, useNavigate } from "react-router-dom";
+import axios from "axios";
 
 function Footer1() {
   const [modalShow1, setModalShow1] = useState(false);
+  const [data, setData] = useState([]);
+  const [mobMenu, setMobMenu] = useState([]);
 
   const navigate = useNavigate();
 
@@ -54,6 +57,29 @@ function Footer1() {
   const navigateToTermsNent = () => {
     navigate("/page/terms&condition-nent");
   };
+
+  const getMobMEnuData = async () => {
+    try {
+      const response = await axios.get(
+        "https://dpboss.deals/api/auth/getMobileMenu"
+      );
+      setMobMenu(response.data.data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  useEffect(() => {
+    getMobMEnuData();
+  }, []);
+  useEffect(() => {
+    // console.log("mobile menu 111", mobMenu);
+  }, [mobMenu]);
+
+  const image4 = mobMenu.find(item => item.id === 4)?.menu_image;
+  const image2 = mobMenu.find(item => item.id === 2)?.menu_image;
+  const image3 = mobMenu.find(item => item.id === 3)?.menu_image;
+
+
   return (
     <div>
       <section id="pricing" className="pricing section-bg btmfootere">
@@ -82,6 +108,7 @@ function Footer1() {
                   address at Heelsumstraat 51 Curaçao
                 </p>
               </div>
+
               <div className="col-lg-3 col-md-3 col-6 social-footer">
                 <h5>CONTACT FAIRBETS</h5>
                 <p style={{ display: "block" }}>
@@ -97,7 +124,7 @@ function Footer1() {
                   </a>
                 </p>
                 <p className="social-inline">
-                  <a target="_blank" href="https://t.me/Fairbets01">
+                  <a target="_blank" href="https://msng.link/o/?fairbets_co=tg">
                     <img alt="telegram" src={Telegram} className="soc-icon" />{" "}
                     Telegram
                   </a>
@@ -192,6 +219,7 @@ function Footer1() {
           >
             <a className="MobileFooter_itemContent" role="button">
               <img
+
                 alt="Satta Matka"
                 className="MobileFooter_icon"
                 src={Satta}
@@ -220,7 +248,7 @@ function Footer1() {
             className="MobileFooter_footerItem active"
           >
             <a className="MobileFooter_itemContent" role="button">
-              <img alt="Home" className="MobileFooter_icon" src={Homeicon} />
+              <img alt="Home" className="MobileFooter_icon" src={image3} />
               <span className="MobileFooter_label">Home</span>
             </a>
           </div>
@@ -238,7 +266,7 @@ function Footer1() {
                 alt="Live
   Casino"
                 className="MobileFooter_icon"
-                src={Casino}
+                src={image2}
               />
               <span className="MobileFooter_label">Live Casino</span>
             </a>
@@ -249,7 +277,7 @@ function Footer1() {
             className="MobileFooter_footerItem"
           >
             <a className="MobileFooter_itemContent" href="#" role="button">
-              <img alt="Slots" className="MobileFooter_icon" src={Slots} />
+              <img alt="Slots" className="MobileFooter_icon" src={image4} />
               <span className="MobileFooter_label">Slots</span>
             </a>
           </div>

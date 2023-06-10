@@ -31,10 +31,14 @@ import ResponsibleGaming from "./components/Page/ResponsibleGaming";
 import PrivacyPolicy from "./components/Page/PrivacyPolicy";
 import TermsNent from "./components/Page/TermsNent";
 import Home1 from "./components/Home1";
+import AccountStatement from "./components/Profile/Account-Statement/AccountStatement";
+import WithdrawRequest from "./components/Profile/Withdraw-Requests/WithdrawRequest";
+import BetHistory from "./components/BetHistory";
+import Exchange from "./components/Exchange";
 
 function App() {
   const result = useSelector((state) => state.cartData);
-  console.log("==========>redux data in app ", result);
+  // console.log("==========>redux data in app ", result);
   const dispatch = useDispatch();
   const product = {
     item: "iphone",
@@ -45,8 +49,10 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home1 />} />
+          <Route path="/bet-history" element={<BetHistory />} />
           <Route path="/menu" element={<Menu />} />
           <Route path="/casino" element={<Casino />} />
+          <Route path="/exchange" element={<Exchange />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/slots" element={<Slots />} />
@@ -69,6 +75,8 @@ function App() {
           <Route path="/page/responsible-gaming" element={<ResponsibleGaming />} />
           <Route path="/page/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/page/terms&condition-nent" element={<TermsNent />} />
+          <Route path="/account-statement" element={<AccountStatement />} />
+          <Route path="/withdraw-request" element={<WithdrawRequest />} />
         </Routes>
       </BrowserRouter>
     </>

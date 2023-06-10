@@ -5,41 +5,101 @@ import Modal from "react-bootstrap/Modal";
 import SignUp from "./SignUp";
 import Eyeslash from "../images/eye-slash.svg";
 import Eyefill from "../images/eye-fill.svg";
+import helper from "../helper";
 import ClientCaptcha from "react-client-captcha";
+import axios from "axios";
+import Cookies from "universal-cookie";
+import jwtDecode from "jwt-decode";
+import { Routes, Route, useNavigate } from "react-router-dom";
 // import "react-client-captcha/dist/index.css";
 
 function Login(props) {
   const intialValues = { username: "", email: "", password: "" };
   const [formValues, setFormValues] = useState(intialValues);
+  const [userName, setUserName] = useState("");
+  const [password, setPassword] = useState("");
   const [formErrors, setFormErrors] = useState({});
   const [isSubmit, setIsSubmit] = useState(false);
+  const [loginTrue, setLoginTrue] = useState(true);
   const [captchaCode, setCaptchaCode] = useState("");
   const [inputCaptchaCode, setInputCaptchaCode] = useState("");
+  const [data, setData] = useState({});
+  const cookies = new Cookies();
 
-  let setCode = (chars) => {
-    setCaptchaCode(chars);
-  };
+  const navigate = useNavigate();
+  const navigateToHome = () => {
+    navigate('/');
+  }
+
+  // const get =cookies.get("jwt-authorization")
+  // console.log("=========>123",get)
+
+  // let setCode = (chars) => {
+  //   setCaptchaCode(chars);
+  // };
 
   let setChange = (e) => {
     e.preventDefault();
     setInputCaptchaCode(e.target.value);
   };
 
-
   const handleChange = (e) => {
-    console.log(e.target);
     const { name, value } = e.target;
     setFormValues({ ...formValues, [name]: value });
-    console.log(formValues);
   };
+  const login = async () => {
+    console.log("======> login");
+    let data = JSON.stringify({
+      user_name: userName,
+      password: password,
+    });
+    let config = {
+      method: "post",
+      maxBodyLength: Infinity,
+      url: "https://dpboss.deals/api/auth/login",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      data: data,
+    };
+    axios
+      .request(config)
+      .then((response) => {
+        var data = response.data.data.token;
+        var user=response.data.data.user_id;
+        console.log("======>2",data)
+        if (response.data.message === "Logged in successfully.") {
+           const set=cookies.set("jwt-authorization",data)
+           const userId=cookies.set("userId",user)
+           console.log("=========>1278",userId)
+           navigateToHome();
+           console.log("=======>set",set)
+          const get =cookies.get("userId")
+          console.log("======>2",get)
+          setModalShow3(false);
 
+          props.onHide();
+          setLoginTrue(true);
+        }
+        console.log("==========>1", data);
+        setData(data);
+        console.log("======>data", data);
+      })
+      .catch((error) => {
+        setLoginTrue(false);
+        console.log("=========>error", error);
+        return error;
+      });
+  };
   useEffect(() => {
-    console.log(formErrors);
     if (Object.keys(formErrors).length === 0 && isSubmit) {
       console.log(formErrors);
     }
   }, []);
 
+  useEffect(() => {
+  }, [data]);
   const handleSubmit = (e) => {
     e.preventDefault();
     setFormErrors(validate(formValues));
@@ -77,6 +137,20 @@ function Login(props) {
     props.onHide();
     setInputCaptchaCode("");
     setCaptchaCode("");
+    setFormValues("");
+    setFormErrors("");
+  };
+
+  const decryptData = (encryptedData) => {
+    // Assuming encryptedData is "33??????????????"
+
+    // Trim leading and trailing whitespace
+    const trimmedData = encryptedData.trim(); // "33??????????????"
+
+    // Remove unwanted characters using regular expression
+    const cleanedData = trimmedData.replace(/[^0-9a-zA-Z]/g, ""); // "33"
+
+    return cleanedData;
   };
 
   function modalClose(e) {
@@ -92,12 +166,13 @@ function Login(props) {
   return (
     <Modal
       {...props}
-      size="lg"
+      size="md"
       aria-labelledby="contained-modal-title-vcenter"
       centered
       onHide={handleClose}
+      
     >
-      <Modal.Header closeButton></Modal.Header>
+      <Modal.Header  closeButton>LOGIN</Modal.Header>
       <Modal.Body>
         <div>
           <div className="container login">
@@ -105,22 +180,24 @@ function Login(props) {
               <label>
                 Username/ Email / Mobile Number:
                 <input
-                  type="email"
+                  type="text"
                   className="input-search"
                   name="username"
-                  value={formValues.username}
-                  onChange={handleChange}
+                  onChange={(e) => {
+                    setUserName(e.target.value);
+                  }}
                 />
               </label>
-              <label>
+              <label >
                 Password:
-                <br/>
+                <br />
                 <input
                   type={passwordVisible ? "text" : "password"}
                   className="input-search"
                   name="password"
-                  value={formValues.password}
-                  onChange={handleChange}
+                  onChange={(e) => {
+                    setPassword(e.target.value);
+                  }}
                 />
                 <a className="eye" onClick={handleToggle}>
                   {passwordVisible ? (
@@ -131,7 +208,7 @@ function Login(props) {
                 </a>
               </label>
               <p>{formErrors.password}</p>
-              <div className="captchanew">
+              {/* <div className="captchanew">
                 <input
                   onChange={(e) => {
                     setChange(e);
@@ -148,24 +225,31 @@ function Login(props) {
                     setCode(chars);
                   }}
                 />
-              </div>
+              </div> */}
 
-              <label>Forget Password ?</label>
+              <label style={{marginTop: "-1.5rem"}}>Forget Password ?</label>
               <div className="btnss">
                 <button
                   className="loginbtn mb-4"
                   type="submit"
                   onClick={() => {
-                    console.log("=================",captchaCode , inputCaptchaCode)
-                    captchaCode === inputCaptchaCode
-                      ? alert("Successfull")
-                      : alert("Enter a Valid Captcha");
-                    setInputCaptchaCode("");
-                    setCaptchaCode("");
+                    console.log(
+                      "=================",
+                      captchaCode,
+                      inputCaptchaCode
+                    );
+                   
+                       login()
+                      
                   }}
                 >
                   LOGIN
                 </button>
+                {loginTrue ? (
+                  <span className="error"></span>
+                ) : (
+                  <span className="error">invalid credentials</span>
+                )}
                 <button
                   style={{ marginLeft: "10px" }}
                   onClick={modalClose}

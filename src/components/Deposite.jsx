@@ -29,6 +29,8 @@ const Deposite = (props) => {
   const [showDeposite, setShowDeposite] = useState(false);
   const [showUpiIcons, setShowUpiIcons] = useState(false);
   const [showPayment, setShowPayment] = useState(false);
+
+  
   return (
     <Modal
       {...props}
@@ -45,7 +47,7 @@ const Deposite = (props) => {
           style={{ padding: "0px" }}
         >
           <ul className="nav nav-tabs justify-content-center" role="tablist">
-            <li className="active">
+            <li style={{borderBottom: "2px solid #a365bd !important"}} className="active">
               <a
                 className="active show"
                 data-toggle="tab"

@@ -1,0 +1,301 @@
+.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.nopadding {
+  padding-right: 0;
+  padding-left: 0;
+  margin-top: 2.5rem;
+}
+
+.bet-head {
+  color: #fff;
+  position: relative;
+  width: 100%;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 8px 19px 8px 8px;
+  border-radius: 0;
+  margin-bottom: 0;
+  background: #436ad8;
+}
+
+.my-beat-main {
+  padding-top: 0;
+}
+
+.my-beat-main {
+  padding: 4px 9px 5px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.bg-black-bx {
+  position: relative;
+  padding: 0;
+  margin-bottom: 9px !important;
+}
+
+.text-yelo {
+  color: #fff;
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -5px;
+  margin-left: -5px;
+}
+
+.calc-wrap label {
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+label {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+.bet-date-bx .form-control {
+  height: 40px !important;
+  border-radius: 3px;
+  font-size: 15px;
+  border: 1px solid #000;
+  appearance: button;
+}
+
+.calc-wrap .form-control {
+  height: 34px;
+  padding: 5px 10px;
+  line-height: 34px;
+  font-size: 14px;
+  color: #000;
+  border: 1px solid #000;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+select.form-control:not([size]):not([multiple]) {
+  height: 34px;
+  line-height: 28px;
+  border: 1px solid #000 !important;
+}
+
+#slct option,
+option {
+  background: #cfd8dc;
+  color: #000;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+  height: 30px;
+  line-height: 3;
+}
+
+.betnew_cent {
+  margin: 15px 0 5px;
+}
+
+.betnew_cent li:last-child {
+  padding-right: 0;
+}
+
+.betnew_cent li:first-child {
+  padding-left: 0;
+}
+
+.betnew_cent li {
+  width: 50%;
+  padding: 0 6px;
+  display: inline-block;
+}
+
+.bet-cent li a {
+  padding: 3px 19px;
+  height: auto;
+  line-height: normal;
+  width: 92%;
+  display: inline-block;
+  margin: 0;
+  font-size: 15px;
+}
+
+.btn {
+  border-radius: 3px;
+}
+
+.table-responsive {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+.my-bet-tabl.table {
+  margin-bottom: 0;
+}
+
+.bg-white {
+  background-color: #fff !important;
+}
+
+.table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 1rem;
+  background-color: transparent;
+  border-collapse: collapse;
+}
+
+.my-bet-tabl thead {
+  background: #54555a;
+  color: #fff;
+  font-size: 15px;
+}
+
+.my-bet-tabl.table thead tr {
+  /* display: flex; */
+  white-space: nowrap;
+}
+
+.my-bet-tabl.table td,
+.my-bet-tabl.table th {
+  padding: 4px 7px;
+  vertical-align: middle;
+  font-size: 13px;
+}
+
+.my-bet-tabl thead th {
+  border-bottom: none;
+  padding: 0.5rem;
+}
+
+.table thead th {
+  border-bottom: none;
+  vertical-align: middle;
+}
+
+.table thead th {
+  border-bottom: 2px solid #dee2e6;
+}
+
+.table th {
+  padding: 10px 0;
+  border: none;
+}
+
+.table td,
+.table th {
+  padding: 0.75rem;
+  vertical-align: top;
+  border-top: 1px solid #dee2e6;
+}
+
+.support_dw .my-bet-tabl.table thead tr th:nth-child(1) {
+  width: 50px;
+}
+
+.my-bet-tabl.table thead tr th:nth-child(1) {
+  width: 258px;
+}
+
+.support_dw .my-bet-tabl.table thead tr th:nth-child(2) {
+  width: 102px;
+}
+
+.my-bet-tabl.table thead tr th:nth-child(2) {
+  width: 56px;
+}
+
+.support_dw .my-bet-tabl.table tbody tr td:nth-child(3),
+.support_dw .my-bet-tabl.table thead tr th:nth-child(3) {
+  width: 86px;
+}
+
+.my-bet-tabl.table thead tr th:nth-child(3) {
+  width: 86px;
+}
+
+.support_dw .my-bet-tabl.table thead tr th:nth-child(4) {
+  width: auto;
+  text-align: left;
+}
+
+.my-bet-tabl.table thead tr th:nth-child(4) {
+  width: 85px;
+}
+
+.tb_rightnew tr th:last-child,
+.tb_rightnew tr th:nth-of-type(4) {
+  text-align: right;
+}
+
+.my-bet-tabl tbody {
+  font-size: 15px;
+}
+
+.my-bet-tabl.table tbody tr {
+  display: flex;
+  white-space: nowrap;
+}
+
+.support_dw .my-bet-tabl.table tbody tr td:nth-child(1) {
+  width: 27px;
+}
+
+.my-bet-tabl.table tbody tr td:nth-child(1) {
+  width: 258px;
+  overflow: hidden;
+  white-space: inherit;
+}
+
+.my-bet-tabl.table tbody tr td {
+  white-space: normal;
+}
+
+.tb_rightnew tr td:nth-of-type(1) {
+  width: 45px;
+}
+
+.tb_rightnew tr td:last-child,
+.tb_rightnew tr td:nth-of-type(4) {
+  text-align: right;
+}
+
+.patti-main-bx {
+    padding: 4px 8px 5px;
+}
+
+.patti-main-bx {
+    overflow-y: scroll;
+}
+
+.patti-main-bx, .patti-main-bx .pad-2 {
+    padding-top: 0;
+}
+
+.patti-main-bx {
+    background: #000;
+}
+
+
+
