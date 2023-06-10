@@ -809,52 +809,50 @@ function SignUp(props) {
                     </div>
                     <div className="row">
                       <div className="col-12">
-                        <div>
-                          <input
-                            style={{ marginTop: "20px", width: "auto" }}
-                            type="checkbox"
-                            className
-                            checked={click}
-                            onClick={() => {
-                              // if(password === confirmPasword &&
-                              //   password != "" &&
-                              //   confirmPasword != "" && click ){
-                              //   setClick(false)
-                              // }else{
-                              //   setClick(true)
-                              // }
-                              password === confirmPasword &&
-                              password != "" &&
-                              confirmPasword != ""
-                                ? setClick(true)
-                                : alert("enter a valid password");
-                            }}
-                          />
-                        </div>
-                        <p>
-                          <span className="check-box">
-                            {" "}
-                            I am of legal age 18+ to gamble and I accept the{" "}
-                            <a
-                              className="text-decoration-none"
-                              href="/page/terms-conditions"
-                              style={{ color: "#de641f" }}
-                            >
+                          <p className="signupp">
+                            <input
+                              style={{ marginTop: "20px", width: "auto" }}
+                              type="checkbox"
+                              className
+                              checked={click}
+                              onClick={() => {
+                                // if(password === confirmPasword &&
+                                //   password != "" &&
+                                //   confirmPasword != "" && click ){
+                                //   setClick(false)
+                                // }else{
+                                //   setClick(true)
+                                // }
+                                password === confirmPasword &&
+                                password != "" &&
+                                confirmPasword != ""
+                                  ? setClick(true)
+                                  : alert("enter a valid password");
+                              }}
+                            />
+                            <span className="check-box">
                               {" "}
-                              Terms and Conditions{" "}
-                            </a>{" "}
-                            and{" "}
-                            <a
-                              className="text-decoration-none"
-                              href="/page/aml-policy"
-                              style={{ color: "#de641f" }}
-                            >
-                              {" "}
-                              Privacy Policy{" "}
-                            </a>
-                            .
-                          </span>
-                        </p>
+                              I am of legal age 18+ to gamble and I accept the{" "}
+                              <a
+                                className="text-decoration-none"
+                                href="/page/terms-conditions"
+                                style={{ color: "#de641f" }}
+                              >
+                                {" "}
+                                Terms and Conditions{" "}
+                              </a>{" "}
+                              and{" "}
+                              <a
+                                className="text-decoration-none"
+                                href="/page/aml-policy"
+                                style={{ color: "#de641f" }}
+                              >
+                                {" "}
+                                Privacy Policy{" "}
+                              </a>
+                              .
+                            </span>
+                          </p>
                       </div>
                     </div>
                     {notValidate ? (
@@ -863,8 +861,14 @@ function SignUp(props) {
                       <span className="error"></span>
                     )}
                     <div className="loBTm">
-                      <div onClick={navigateToHome} className="logbk">
-                        <button className="log-reg-btn"> &lt; Back </button>
+                      <div className="logbk">
+                        <button
+                          onClick={() => props.onHide()}
+                          className="log-reg-btn"
+                        >
+                          {" "}
+                          &lt; Back{" "}
+                        </button>
                       </div>
                       <div className="logreg">
                         <button

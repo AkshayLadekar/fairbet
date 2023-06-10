@@ -279,10 +279,10 @@ section.secLogin {
   float: left;
 }
 .logbk a {
-    color: #fff;
-    font-size: 14px;
-    display: block;
-    text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+  display: block;
+  text-decoration: none;
 }
 .logreg {
   float: right;
@@ -379,6 +379,11 @@ section.secLogin {
   margin-top: 9px !important;
   background: linear-gradient(to right, #436ad8 0%, #b264b9 100%) !important;
   border: 0 !important;
+}
+
+p.signupp {
+  margin-bottom: 0;
+  margin-top: -10px;
 }
 
 @media only screen and (max-device-width: 290px) {
@@ -561,9 +566,9 @@ section.secLogin {
 
 /*------------------------*/
 .login-second {
-  padding: 8px 15px;
+  padding: 0px 15px;
   background-color: #fff;
-  padding-bottom: 25px;
+  /* padding-bottom: 25px; */
 }
 
 .pos {
@@ -594,7 +599,9 @@ input.pass {
 }
 .error {
   color: red;
-  font-size: 10px;
+  font-size: 12px;
+  position: relative;
+  top: -6px;
 }
 .error1 {
   color: black;

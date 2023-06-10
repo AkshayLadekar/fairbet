@@ -141,6 +141,7 @@ function Profile() {
             <div className="logou-bx text-center">
               <button onClick={()=>{
                 cookies.remove("jwt-authorization")
+                cookies.remove("userId")
                 navigateToHome()
               }} className="btn btn-red brocure" type="button">
                 {" "}

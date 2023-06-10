@@ -55,8 +55,8 @@ function Exchange() {
       <div className="sattamatka">
         hello
         <iframe
-          //src={`https:\/\/jetfair.io\/lobby?Token=qRIxv%2fdAGyh2uW2jSXAKdQBrkZwNWHJcR6ThxE5AGX37ZVlkfbeCEdi4vqImRHP3%2fUmmt4C3UrM%3d`}
-          src={url}
+          src={`https:\/\/jetfair.io\/lobby?Token=qRIxv%2fdAGyh2uW2jSXAKdQBrkZwNWHJcR6ThxE5AGX37ZVlkfbeCEdi4vqImRHP3%2fUmmt4C3UrM%3d`}
+          //src={url}
           width="100%"
           frameborder="0"
           height="600px"

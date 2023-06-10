@@ -152,7 +152,24 @@ function Header1(props) {
               Live casino
             </a>
             <a
-              onClick={() => setModalShowLogin(true)}
+              onClick={() =>{ 
+                //setModalShowLogin(true)
+              }}
+              href="/lottrey"
+              className="tpNv"
+              style={{
+                borderBottom:
+                  window.location.pathname === "/lottrey"
+                    ? "2px solid #876ac5"
+                    : "none",
+              }}
+            >
+              Lottery
+            </a>
+            <a
+              onClick={() =>{ 
+                //setModalShowLogin(true)
+              }}
               href="/satta"
               className="tpNv"
               style={{

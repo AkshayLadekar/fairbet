@@ -119,13 +119,13 @@ function Login(props) {
       errors.email = "This is not a valid email format!";
     }
 
-    if (!values.password) {
-      errors.password = "Password is required!";
-    } else if (values.password < 4) {
-      errors.password = "Password must be more than 4 characters";
-    } else if (values.password > 16) {
-      errors.password = "Password cannot be more than 16 characters";
-    }
+    // if (!values.password) {
+    //   errors.password = "Password is required!";
+    // } else if (values.password < 4) {
+    //   errors.password = "Password must be more than 4 characters";
+    // } else if (values.password > 16) {
+    //   errors.password = "Password cannot be more than 16 characters";
+    // }
     return errors;
   };
 
@@ -228,6 +228,11 @@ function Login(props) {
               </div> */}
 
               <label style={{marginTop: "-1.5rem"}}>Forget Password ?</label>
+              {loginTrue ? (
+                  <></>
+                ) : (
+                  <span className="error">Invalid Credentials</span>
+                )}
               <div className="btnss">
                 <button
                   className="loginbtn mb-4"
@@ -245,11 +250,7 @@ function Login(props) {
                 >
                   LOGIN
                 </button>
-                {loginTrue ? (
-                  <span className="error"></span>
-                ) : (
-                  <span className="error">invalid credentials</span>
-                )}
+                
                 <button
                   style={{ marginLeft: "10px" }}
                   onClick={modalClose}
@@ -259,6 +260,10 @@ function Login(props) {
                   SIGN UP
                 </button>
               </div>
+              {/* <SignUp
+                        show={modalShowSignUp}
+                        onHide={() => setModalShowSignUp(false)}
+                      /> */}
 
               <SignUp
                 closeSignUp={() => setModalShow3(false)}

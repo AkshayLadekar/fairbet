@@ -31,25 +31,31 @@ function AccountStatement() {
           </div>
         </div>
         <div className="tableOuter">
-          <h2 className="stmnt">Account Statement</h2>
+          <h2 className="stmnt">Account Statement:</h2>
           <div className="clrBoth" />
           <div className="tablinner">
             <table className="stat-mnt" style={{ width: "100%" }}>
               <tbody>
                 <tr>
                   <th>Date</th>
+                  <td>:</td>
                   <td>Mar 30, 2023, 6:46:34 PM</td>
                 </tr>
                 <tr>
                   <th>Narration</th>
+                  <td>:</td>
+
                   <td>Account</td>
                 </tr>
                 <tr>
                   <th>Credit/Debit </th>
+                  <td>:</td>
                   <td className="lss">-120</td>
                 </tr>
                 <tr>
                   <th>Balance</th>
+                  <td>:</td>
+
                   <td className="prfts">15638</td>
                 </tr>
               </tbody>

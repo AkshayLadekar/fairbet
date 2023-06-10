@@ -35,6 +35,7 @@ import AccountStatement from "./components/Profile/Account-Statement/AccountStat
 import WithdrawRequest from "./components/Profile/Withdraw-Requests/WithdrawRequest";
 import BetHistory from "./components/BetHistory";
 import Exchange from "./components/Exchange";
+import Lottrey from "./components/lottery";
 
 function App() {
   const result = useSelector((state) => state.cartData);
@@ -52,6 +53,7 @@ function App() {
           <Route path="/bet-history" element={<BetHistory />} />
           <Route path="/menu" element={<Menu />} />
           <Route path="/casino" element={<Casino />} />
+          <Route path="/lottrey" element={<Lottrey />} />
           <Route path="/exchange" element={<Exchange />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
