@@ -89,6 +89,10 @@ a.msgId {
   .row-mr .col {
     padding: 0 70px !important;
   }
+  .login {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 @media only screen and (max-width: 600px) {

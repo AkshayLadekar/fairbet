@@ -624,4 +624,12 @@ input.pass {
     top: 0px;
     right: 10px;
   }
+  .login-second {
+    display: flex;
+    justify-content: center;
+  }
+  .login {
+    display: flex;
+    justify-content: center;
+  }
 }
