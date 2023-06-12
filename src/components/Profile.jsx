@@ -19,16 +19,26 @@ import Withdraw from "./withdraw";
 import Cookies from "universal-cookie";
 import jwtDecode from "jwt-decode";
 import { Routes, Route, useNavigate } from "react-router-dom";
+import ChangePassword from "./Profile/Change-Password/ChangePassword";
 
 function Profile() {
   const [showModal, setShowModal] = useState(false);
+  const [modalChangePassword, setModalChangePassword] = useState(false);
   const [modalShowSignUp, setModalShowSignUp] = useState(false);
   const cookies = new Cookies();
 
   const navigate = useNavigate();
   const navigateToHome = () => {
     navigate('/');
-
+  };
+  const navigateToBetHistory = () => {
+    navigate('/bet-history');
+  };
+  const navigateToWithdrawReq = () => {
+    navigate('/withdraw-request');
+  };
+  const navigateToFeedback = () => {
+    navigate('/feedback');
   };
   return (
     <div>
@@ -95,7 +105,7 @@ function Profile() {
                 </a>
               </li>
               <li className="colorchangebg">
-                <a href="/my-bets">
+                <a onClick={navigateToBetHistory}>
                   <img src={Nf3} />
                   <span> Bet History</span>
                 </a>
@@ -107,22 +117,24 @@ function Profile() {
                 </a>
               </li>
               <li className="colorchangebg">
-                <a href="/dwrequest-statement">
+                <a onClick={navigateToWithdrawReq}>
                   <img src={Nf5} />
                   <span>Withdraw Requests</span>
                 </a>
               </li>
               <li className="colorchangebg">
-                <a href="/support-request">
+                <a onClick={navigateToFeedback}>
                   <img src={Nf6} /> <span> Feedback</span>
                 </a>
               </li>
               <li className="colorchangebg">
                 <a href>
                   <img src={Nf7} />
-                  <span> Change Password</span>
+                  <span onClick={()=>{setModalChangePassword(true)}}> Change Password</span>
                 </a>
               </li>
+              <ChangePassword show={modalChangePassword}  onHide={()=>{setModalChangePassword(false)}}
+               />
             </ul>
             <ul className="social-media socialwhite">
               <li className="colorchangebg_2">

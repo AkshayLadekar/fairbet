@@ -13,7 +13,7 @@ import jwtDecode from "jwt-decode";
 import { Routes, Route, useNavigate } from "react-router-dom";
 // import "react-client-captcha/dist/index.css";
 
-function Login(props) {
+function Login1(props) {
   const intialValues = { username: "", email: "", password: "" };
   const [formValues, setFormValues] = useState(intialValues);
   const [userName, setUserName] = useState("");
@@ -157,16 +157,6 @@ function Login(props) {
   };
 
   return (
-    <Modal
-      {...props}
-      size="md"
-      aria-labelledby="contained-modal-title-vcenter"
-      centered
-      onHide={handleClose}
-      
-    >
-      <Modal.Header  closeButton>LOGIN</Modal.Header>
-      <Modal.Body>
         <div>
           <div className="container login">
             <form onSubmit={handleSubmit}>
@@ -281,9 +271,6 @@ function Login(props) {
             </form>
           </div>
         </div>
-      </Modal.Body>
-    </Modal>
   );
 }
-
-export default Login;
+export default Login1;

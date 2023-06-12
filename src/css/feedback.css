@@ -5,12 +5,30 @@ html.hydrated {
 .bet-cent-btn-bx {
   margin: 20px 0 0 7px;
 }
-
-.het-hist-bx {
-  background: #ddd;
+.bet-head2 {
+  color: #fff;
+  position: relative;
+  width: 100%;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 8px 19px 8px 8px;
+  border-radius: 0;
+  margin-bottom: 0;
+  background: #436ad8;
   margin-top: 5rem;
+}
+
+.het-hist-bx-fed {
+  background: #ddd;
+  margin-top: 0;
   margin-bottom: 10px;
 }
+
+.my-bet-tabl.tb_support {
+  margin-bottom: 20px !important;
+}
+
 .btn {
   border-radius: 3px;
 }
@@ -36,3 +54,16 @@ html.hydrated {
 .bck {
   background: #ddd;
 }
+.my-bet-tabl.table tbody tr td:nth-child(1) {
+  width: 100%;
+  overflow: hidden;
+  white-space: inherit;
+}
+
+.fedtable {
+  vertical-align: bottom;
+    background: #54555a;
+    color: #fff;
+    font-size: 15px;
+}
+

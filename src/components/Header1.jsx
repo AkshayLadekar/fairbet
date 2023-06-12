@@ -63,7 +63,7 @@ function Header1(props) {
         console.log(error);
       });
   };
-
+  
   useEffect(() => {
     getWayData();
   }, []);

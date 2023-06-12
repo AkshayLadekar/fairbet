@@ -73,6 +73,47 @@ a.msgId {
   color: #fff;
 }
 
+@media only screen and (max-width: 290px) {
+  .loginbtn {
+    font-size: 10px;
+  }
+  .msgId {
+    font-size: 15px;
+  }
+  .profile-list li a span {
+    font-size: 10px;
+  }
+  .tpNv {
+    font-size: 10px;
+  }
+  .logo a img {
+    width: 110px;
+  }
+  .get-started-btn {
+    font-size: 8px;
+  }
+  .social-media li {
+    display: inline-block;
+    width: 125px;
+  }
+  .social-media li a span {
+    font-size: 13px;
+  }
+  .logou-bx .btn.btn-red {
+    padding: 5px;
+  }
+  .evol-label {
+    line-height: 16px;
+    height: 20px !important;
+  }
+  .evol-label img {
+    margin-top: 1px;
+  }
+  .list-logo {
+    width: 15px;
+  }
+}
+
 @media (max-width: 1200px) {
   a.eye {
     float: right;
@@ -84,6 +125,7 @@ a.msgId {
     padding: 0 4px !important;
   }
 }
+
 
 @media (min-width: 1200px) {
   .row-mr .col {
@@ -107,6 +149,16 @@ a.msgId {
 
   .input-search {
     width: 100%;
+  }
+}
+
+@media only screen and (min-width: 540px) {
+  .modal-content {
+    width: 70%;
+    margin: 0 80px;
+  }
+  .white-form-dv {
+    padding-bottom: 70px !important;
   }
 }
 

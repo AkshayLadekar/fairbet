@@ -1,8 +1,12 @@
+
 .no-gutters {
   margin-right: 0;
   margin-left: 0;
 }
-
+.mar {
+  margin-top: 5rem;
+  background: #ddd;
+}
 .nopadding {
   padding-right: 0;
   padding-left: 0;
@@ -112,6 +116,7 @@ option {
 
 .betnew_cent {
   margin: 15px 0 5px;
+  padding: 0;
 }
 
 .betnew_cent li:last-child {
@@ -263,7 +268,7 @@ option {
 }
 
 .my-bet-tabl.table tbody tr td:nth-child(1) {
-  width: 258px;
+  width: 100%;
   overflow: hidden;
   white-space: inherit;
 }

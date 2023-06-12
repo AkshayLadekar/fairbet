@@ -323,3 +323,44 @@ p.crdNmar {
     line-height: 27px;
   }
 }
+
+@media only screen and (max-width: 290px) {
+  .loginbtn {
+    font-size: 10px;
+  }
+  .msgId {
+    font-size: 15px;
+  }
+  .profile-list li a span {
+    font-size: 10px;
+  }
+  .tpNv {
+    font-size: 10px;
+  }
+  .logo a img {
+    width: 110px;
+  }
+  .get-started-btn {
+    font-size: 8px;
+  }
+  .social-media li {
+    display: inline-block;
+    width: 125px;
+  }
+  .social-media li a span {
+    font-size: 13px;
+  }
+  .logou-bx .btn.btn-red {
+    padding: 5px;
+  }
+  .evol-label {
+    line-height: 16px;
+    height: 19px !important;
+  }
+  .evol-label img {
+    margin-top: 1px;
+  }
+  .list-logo {
+    width: 15px;
+  }
+}

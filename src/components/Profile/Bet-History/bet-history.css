@@ -1,0 +1,72 @@
+.bet-head1 {
+  color: #fff;
+  position: relative;
+  width: 100%;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 8px 19px 8px 8px;
+  border-radius: 0;
+  margin-bottom: 0;
+  background: #436ad8;
+}
+
+.no-gutters {
+  margin-top: 5rem;
+}
+
+.mar1 {
+  background: #ddd;
+}
+
+.bet-cent li a {
+  padding: 3px 19px;
+  height: auto;
+  line-height: normal;
+  width: 100%;
+  display: inline-block;
+  margin: 0;
+  font-size: 15px;
+}
+
+.tble {
+  margin: 15px 0px;
+}
+
+.my-bet-tab2 thead {
+  background: #54555a;
+  color: #fff;
+  font-size: 15px;
+}
+
+.table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 1rem;
+  background-color: transparent;
+  border-collapse: collapse;
+}
+
+.activeButton {
+  background: green;
+  color: #fff !important;
+}
+
+.btn-gren {
+  background: #00b2ff;
+  color: #fff !important;
+}
+
+@media only screen and (max-width: 600px) {
+    form {
+      padding: 0 20px !important;
+    }
+  
+    label {
+      max-width: 100%;
+    }
+  
+    .input-search {
+      width: 100%;
+    }
+  }

@@ -105,6 +105,14 @@
   color: #12b928;
 }
 
+@media (min-width: 1200px) {
+  .StatementOuter {
+    width: 50%;
+    margin: 0 380px;
+  }
+}
+
+
 @media screen and (max-width: 290px) {
   .input-outer .cntrl {
     font-size: 14px;

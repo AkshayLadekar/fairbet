@@ -1,17 +1,17 @@
 import React from "react";
 import Header1 from "../../Header1";
 import Footer1 from "../../Footer1";
-import "../Withdraw-Requests/withdraw-requests.css";
+import "../Bet-History/bet-history.css";
 
-function WithdrawRequest() {
+function BetHistory() {
   return (
     <div>
       <Header1 />
-      <div className="row no-gutters mar">
-        <h4 className="bet-head">Withdraw Requests</h4>
+      <div className="row no-gutters mar1">
+        <h4 className="bet-head1">MY BETS</h4>
         <div className="container">
           <div className="row">
-            <div class="col-sm-6 col-md-4 col-6">
+            <div class="col-sm-6 col-md-4 col-4">
               <label _ngcontent-c4="" htmlFor="">
                 From Date
               </label>
@@ -25,7 +25,7 @@ function WithdrawRequest() {
                 fdprocessedid="6ugcf8"
               />
             </div>
-            <div class="col-sm-6 col-md-4 col-6">
+            <div class="col-sm-6 col-md-4 col-4">
               <label _ngcontent-c4="" htmlFor="">
                 To Date
               </label>
@@ -39,7 +39,7 @@ function WithdrawRequest() {
                 fdprocessedid="6ugcf8"
               />
             </div>
-            <div class="col-sm-6 col-md-4 col-6">
+            <div class="col-sm-6 col-md-4 col-4">
               <label _ngcontent-c4="" htmlFor="">
                 Sport
               </label>
@@ -51,24 +51,42 @@ function WithdrawRequest() {
                 <option _ngcontent-c4="" value={0}>
                   All
                 </option>
-                <option _ngcontent-c4="" value={0}>
-                  Pending
-                </option>
                 {/**/}
                 <option _ngcontent-c4="" value={4}>
-                  Cancelled
+                  Cricket
                 </option>
                 <option _ngcontent-c4="" value={2}>
-                  Approved
+                  Tennis
                 </option>
                 <option _ngcontent-c4="" value={1}>
-                  Decline
+                  Soccer
                 </option>
                 <option _ngcontent-c4="" value={111}>
-                  Hold
+                  Casino
                 </option>
                 <option _ngcontent-c4="" value={7}>
-                  Reverse
+                  Horse Racing
+                </option>
+                <option _ngcontent-c4="" value={4339}>
+                  Greyhound
+                </option>
+                <option _ngcontent-c4="" value={7522}>
+                  Basketball
+                </option>
+                <option _ngcontent-c4="" value={1477}>
+                  Rugby League
+                </option>
+                <option _ngcontent-c4="" value={5}>
+                  Rugby Union
+                </option>
+                <option _ngcontent-c4="" value={7511}>
+                  Baseball
+                </option>
+                <option _ngcontent-c4="" value={6}>
+                  Boxing
+                </option>
+                <option _ngcontent-c4="" value={6422}>
+                  Snooker
                 </option>
               </select>
             </div>
@@ -78,10 +96,19 @@ function WithdrawRequest() {
               <li _ngcontent-c4="">
                 <a
                   _ngcontent-c4=""
-                  className="bet-cent-btn-bx btn
-              btn-gren"
+                  className="bet-cent-btn-bx btn btn-gren activeButton"
+                  id="runingbtn"
                 >
-                  Search
+                  Running
+                </a>
+              </li>
+              <li _ngcontent-c4="">
+                <a
+                  _ngcontent-c4=""
+                  className="bet-cent-btn-bx btn btn-gren"
+                  id="complatebtn"
+                >
+                  Completed
                 </a>
               </li>
             </ul>
@@ -91,11 +118,17 @@ function WithdrawRequest() {
               <thead _ngcontent-c4="">
                 <tr _ngcontent-c4="">
                   <th _ngcontent-c4="" className="wd-24">
-                    S.NO
+                    Description
                   </th>
-                  <th _ngcontent-c4="">Date</th>
-                  <th _ngcontent-c4="">Amount</th>
-                  <th _ngcontent-c4="">Status</th>
+                  <th _ngcontent-c4="">Market</th>
+                  <th _ngcontent-c4="">Odds</th>
+                  <th _ngcontent-c4="">Stack</th>
+                  <th _ngcontent-c4="" className="wd-221">
+                    P&amp;L
+                  </th>
+                  {/**/}
+                  <th _ngcontent-c4="">Liability</th>
+                  {/**/}
                 </tr>
               </thead>
               <tbody _ngcontent-c4="">
@@ -115,9 +148,10 @@ function WithdrawRequest() {
           </div>
         </div>
       </div>
+
       <Footer1 />
     </div>
   );
 }
 
-export default WithdrawRequest;
+export default BetHistory;

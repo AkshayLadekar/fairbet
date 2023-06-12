@@ -395,6 +395,24 @@ p.signupp {
   .rdsc span {
     line-height: 9px;
   }
+  .registerForm {
+    padding: 0 !important;
+  }
+  .login-second {
+    padding: 0;
+  }
+  .rdsc {
+    font-size: 8px;
+  }
+  .mobile12 {
+    width: 55% !important;
+  }
+  .otpbtn {
+    padding: 2px !important;
+  }
+  .log-reg-btn {
+    font-size: 12px;
+  }
 }
 
 .registerForm {
@@ -409,6 +427,9 @@ p.signupp {
   }
   .limg {
     width: 56px;
+  }
+  .mobile1 {
+    width: 70% !important;
   }
 }
 
@@ -631,5 +652,8 @@ input.pass {
   .login {
     display: flex;
     justify-content: center;
+  }
+  .row-mr.sign2 .col {
+    padding: 0 45px !important;
   }
 }

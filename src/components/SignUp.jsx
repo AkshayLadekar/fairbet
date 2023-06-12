@@ -477,7 +477,7 @@ function SignUp(props) {
             <p _ngcontent-c1 className="id-redy">
               Get your ready-made ID from whatsapp
             </p>
-            <div _ngcontent-c1 className="row row-mr">
+            <div _ngcontent-c1 className="row row-mr sign2">
               <div _ngcontent-c1 className="col">
                 <div _ngcontent-c1 className="limg">
                   <img _ngcontent-c1 src={F1} />
@@ -624,12 +624,12 @@ function SignUp(props) {
                         <div className="username-input">
                           <i className="preno">+91</i>
                           <input
-                            id="mobile"
+                            id="mobile "
                             max="10"
                             min="10"
                             placeholder="  Phone No"
                             type="number"
-                            className="mobile1"
+                            className="mobile1 mobile12"
                             value={otp}
                             onChange={(e) => handleMobile(e)}
                             // onBlur={handleCheckUserMobile}
