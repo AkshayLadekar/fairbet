@@ -270,11 +270,11 @@ section.secLogin {
   margin-top: 25px;
   margin-bottom: 15px;
 }
-.login-second {
+/* .login-second {
   padding: 8px 10px;
   background-color: #fff;
   padding-bottom: 25px;
-}
+} */
 .logbk {
   float: left;
 }
@@ -371,7 +371,7 @@ section.secLogin {
   padding: 5px 0 !important;
 }
 .mobile1 {
-  width: 77% !important;
+  width: 73% !important;
 }
 
 .otpbtn {
@@ -402,7 +402,7 @@ p.signupp {
     padding: 0;
   }
   .rdsc {
-    font-size: 8px;
+    font-size: 8px !important;
   }
   .mobile12 {
     width: 55% !important;
@@ -417,6 +417,7 @@ p.signupp {
 
 .registerForm {
   padding: 0;
+  margin: 0 auto;
 }
 
 @media only screen and (min-width: 400px) {
@@ -424,6 +425,7 @@ p.signupp {
     display: block;
     line-height: 10px;
     margin-top: 6px;
+    font-size: 8px;
   }
   .limg {
     width: 56px;
@@ -638,12 +640,21 @@ input.pass {
   }
 }
 
+@media only screen and (max-width: 600px) {
+  .registerForm {
+    padding: 0 !important;
+  }
+  .login-second {
+    padding: 0;
+  }
+  .rdsc {
+    font-size: 9px;
+  }
+}
+
 @media (min-width: 1200px) {
   a.eye1 {
-    float: right;
-    position: relative;
     top: 0px;
-    right: 10px;
   }
   .login-second {
     display: flex;

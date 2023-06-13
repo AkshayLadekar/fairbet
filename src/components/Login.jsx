@@ -169,7 +169,7 @@ function Login(props) {
       <Modal.Body>
         <div>
           <div className="container login">
-            <form onSubmit={handleSubmit}>
+            <form className="log" onSubmit={handleSubmit}>
               <label>
                 Username/ Email / Mobile Number:
                 <input

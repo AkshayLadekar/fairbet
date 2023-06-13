@@ -46,6 +46,16 @@ function Header1(props) {
     }
   };
 
+  useEffect(()=>{
+    console.log("==========>window.location",window.location.pathname)
+    const setState=()=>{
+      if(!cookies.get("jwt-authorization") && window.location.pathname !== "/"){
+        setModalShowLogin(true)
+      }
+    }
+    setState()
+  })
+
   const getWayData = () => {
     let config = {
       method: "get",
@@ -64,6 +74,7 @@ function Header1(props) {
       });
   };
 
+  
   useEffect(() => {
     getWayData();
   }, []);
@@ -132,7 +143,7 @@ function Header1(props) {
             }
               style={{
                 borderBottom:
-                  window.location.pathname === "#"
+                  window.location.pathname === "/exchange"
                     ? "2px solid #876ac5"
                     : "none",
               }}

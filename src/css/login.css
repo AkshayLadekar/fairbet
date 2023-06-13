@@ -6,8 +6,12 @@ form {
   max-width: 400px;
 }
 
-.logform{
+.logform {
   margin: auto;
+}
+
+form.log {
+  margin: 50px auto;
 }
 
 .modal-header {
@@ -154,7 +158,7 @@ h2.log {
     /* margin: auto; */
     padding: 0 20px;
   }
-  .logform{
+  .logform {
     margin: auto;
   }
 
