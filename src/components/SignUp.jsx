@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import F1 from "../images/fi1.png";
 import F2 from "../images/fi2.png";
 import F6 from "../images/fi6.png";
@@ -52,6 +52,7 @@ function SignUp(props) {
   const [userNameVerify, setUserNameVerify] = useState(false);
   const [emailVerify, setEmailVerify] = useState(false);
   const [mobileVerify, setMobileVerify] = useState(false);
+  const signupModal = useRef(null);
   const cookies = new Cookies();
 
   const handleChangeUserName = (e) => {
@@ -444,7 +445,10 @@ function SignUp(props) {
 
   function Close2(e) {
     setModalShow4(true);
-    props.closeSignUp();
+    if( signupModal.current ) {
+      document.getElementById("signup-modal").remove();
+    }
+    // props.closeSignUp();
     e.preventDefault();
   }
   const [passwordVisible, setPasswordVisible] = useState(false);
@@ -469,6 +473,8 @@ function SignUp(props) {
       size="lg"
       aria-labelledby="contained-modal-title-vcenter"
       centered
+      id='signup-modal'
+      ref={signupModal}
     >
       <Modal.Header closeButton>REGISTER</Modal.Header>
       <Modal.Body>

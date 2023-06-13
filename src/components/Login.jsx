@@ -163,6 +163,7 @@ function Login(props) {
       aria-labelledby="contained-modal-title-vcenter"
       centered
       onHide={handleClose}
+      id='login-modal'
       
     >
       <Modal.Header  closeButton>LOGIN</Modal.Header>
