@@ -14,8 +14,51 @@ import f15 from "../images/live-casino/fl5.png";
 import f16 from "../images/live-casino/fl6.png";
 import f17 from "../images/live-casino/fl7.png";
 import andar from "../images/live-casino/andar_bahar.jpg";
+import axios from "axios";
 
 function Casino() {
+  const [topGame1, setTopGame1] = useState([]);
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    const postData = async () => {
+      try {
+        topGames();
+
+        const response = await axios.get(
+          "https://dpboss.deals/api/auth/getBanner"
+        );
+        setData(response.data.data);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+    const topGames = async () => {
+      let data = JSON.stringify({ game_name: "live-casino", page: "1" });
+      let config = {
+        method: "post",
+        maxBodyLength: Infinity,
+        url: "https://dpboss.deals/api/auth/getCasinoMatches",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        data: data,
+      };
+      axios
+        .request(config)
+        .then((response) => {
+          var data = response.data.data;
+          setTopGame1(data);
+        })
+        .catch((error) => {
+          return error;
+        });
+    };
+    postData();
+  }, []);
+
+  useEffect(() => {}, [topGame1]);
   return (
     <>
       <div>
@@ -166,96 +209,20 @@ function Casino() {
 
           <div className="casinoMainDv">
             <div className="row md-rwo tps colsp crvimgrst indTp">
-              <div className="col-4 crv-csn">
-                <div className="member-img">
-                  <div>
-                    <a href="/login">
-                      <img alt="" className="img-fluid" src={andar} />
-                    </a>
+              {topGame1?.map((review) => {
+                var imgs = `https://fairbets.co/assets/casino_images/${review.ImageFullPath}`;
+                return (
+                  <div className="col-4 crv-csn">
+                    <div className="member-img">
+                      <div>
+                        <a>
+                          <img alt={review.ID} className="img-fluid" src={`https://fairbets.co/assets/casino_images/${review.ImageFullPath}`} />
+                        </a>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-              <div className="col-4 crv-csn">
-                <div className="member-img">
-                  <div>
-                    <a href="/login">
-                      <img alt="" className="img-fluid" src={andar} />
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div className="col-4 crv-csn">
-                <div className="member-img">
-                  <div>
-                    <a href="/login">
-                      <img alt="" className="img-fluid" src={andar} />
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div className="col-4 crv-csn">
-                <div className="member-img">
-                  <div>
-                    <a href="/login">
-                      <img alt="" className="img-fluid" src={andar} />
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div className="col-4 crv-csn">
-                <div className="member-img">
-                  <div>
-                    <a href="/login">
-                      <img alt="" className="img-fluid" src={andar} />
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div className="col-4 crv-csn">
-                <div className="member-img">
-                  <div>
-                    <a href="/login">
-                      <img alt="" className="img-fluid" src={andar} />
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div className="col-4 crv-csn">
-                <div className="member-img">
-                  <div>
-                    <a href="/login">
-                      <img alt="" className="img-fluid" src={andar} />
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div className="col-4 crv-csn">
-                <div className="member-img">
-                  <div>
-                    <a href="/login">
-                      <img alt="" className="img-fluid" src={andar} />
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div className="col-4 crv-csn">
-                <div className="member-img">
-                  <div>
-                    <a href="/login">
-                      <img alt="" className="img-fluid" src={andar} />
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div className="col-4 crv-csn">
-                <div className="member-img">
-                  <div>
-                    <a href="/login">
-                      <img alt="" className="img-fluid" src={andar} />
-                    </a>
-                  </div>
-                </div>
-              </div>
+                );
+              })}
             </div>
             <div className="clrBoth" />
           </div>

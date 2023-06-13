@@ -43,7 +43,7 @@ function Home1() {
   };
 
   const handleImageClick = () => {
-  console.log("==========>123456",iframeVisible)
+    console.log("==========>123456", iframeVisible);
     setIframeVisible(true);
   };
   const navigateToCasino = () => {
@@ -100,10 +100,10 @@ function Home1() {
     <>
       <Header1 login={login} />
       <Login
-                        show={modalShowLogin}
-                        onHide={() => setModalShowLogin(false)}
-                        close={() => setModalShowLogin(false)}
-                      />
+        show={modalShowLogin}
+        onHide={() => setModalShowLogin(false)}
+        close={() => setModalShowLogin(false)}
+      />
       <section id="testimonials" className="testimonials secpd">
         <div className="container pad00">
           <div className="row justify-content-center">
@@ -184,8 +184,8 @@ function Home1() {
                       // onBlur={() => {
                       //   //setLogin(false);
                       // }}
-                      onClick={() =>{ 
-                        setModalShowLogin(true)
+                      onClick={() => {
+                        setModalShowLogin(true);
                         //handleImageClick();
                       }}
                     >
@@ -216,8 +216,8 @@ function Home1() {
                   </div>
                   <div className="col-6 crvimg">
                     <div
-                      onClick={() =>{ 
-                        setModalShowLogin(true)
+                      onClick={() => {
+                        setModalShowLogin(true);
                         //handleImageClick();
                       }}
                       className="member-img"

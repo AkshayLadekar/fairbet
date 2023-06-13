@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Header from "../Header1";
 import Footer from "../Footer1";
 import { Navigate, useNavigate } from "react-router-dom";
@@ -6,8 +6,51 @@ import { Container, Dropdown, DropdownButton } from "react-bootstrap";
 import Lobby from "../../images/lobby.jpg";
 import Casinobet from "../../images/fairbets-casino.png";
 import "../../css/topgames.css";
+import axios from "axios";
 
 function Topgames() {
+  const [topGame1, setTopGame1] = useState([]);
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    const postData = async () => {
+      try {
+        topGames();
+
+        const response = await axios.get(
+          "https://dpboss.deals/api/auth/getBanner"
+        );
+        setData(response.data.data);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+    const topGames = async () => {
+      let data = JSON.stringify({ game_name: "top-games", page: "1" });
+      let config = {
+        method: "post",
+        maxBodyLength: Infinity,
+        url: "https://dpboss.deals/api/auth/getCasinoMatches",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        data: data,
+      };
+      axios
+        .request(config)
+        .then((response) => {
+          var data = response.data.data;
+          setTopGame1(data);
+        })
+        .catch((error) => {
+          return error;
+        });
+    };
+    postData()
+  },[]);
+
+  useEffect(() => {}, [topGame1]);
   return (
     <>
       <div>
@@ -69,21 +112,14 @@ function Topgames() {
 
         <div class="container-fluid">
           <div class="row">
-            <div class="col-4 py-3">
-              <img src={Lobby} class="img-fluid" />
-            </div>
-            <div class="col-4 py-3">
-              <img src={Lobby} class="img-fluid" />
-            </div>
-            <div class="col-4 py-3">
-              <img src={Lobby} class="img-fluid" />
-            </div>
-            <div class="col-4 py-3">
-              <img src={Lobby} class="img-fluid" />
-            </div>
-            <div class="col-4 py-3">
-              <img src={Lobby} class="img-fluid" />
-            </div>
+            {topGame1?.map((review) => {
+              var imgs = `https://fairbets.co/assets/casino_images/${review.ImageFullPath}`;
+              return (
+                <div class="col-4 py-3">
+                  <img src={imgs} class="img-fluid topgames" />
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState , useEffect} from "react";
 import "../css/menu.css";
 import Header from "./Header1";
 import Homemenu from "../images/home.svg";
@@ -88,6 +88,8 @@ function Menu() {
     navigate("/casino/poker");
   };
 
+  
+
   return (
     <>
       <Header />
@@ -97,7 +99,9 @@ function Menu() {
             <h3 _ngcontent-c1 className="grad">
               QUICK ACCESS
             </h3>
-            <span onClick={navigateToHome} className="cross">X</span>
+            <span onClick={navigateToHome} className="cross">
+              X
+            </span>
             <ul _ngcontent-c1>
               <li _ngcontent-c1>
                 <a onClick={navigateToHome} _ngcontent-c1 href="#">
