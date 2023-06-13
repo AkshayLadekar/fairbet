@@ -100,7 +100,7 @@ function App() {
           />
           <Route
             path="/exchange"
-            element={tokenAvailable ? <Exchange /> : <Login1 />}
+            element={ <Exchange />}
           />
           <Route
             path="/login"

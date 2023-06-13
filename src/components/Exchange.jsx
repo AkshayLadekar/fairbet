@@ -12,7 +12,7 @@ function Exchange() {
     const cookies = new Cookies();
     useEffect(() => {
         const call = async () => {
-            exchange();
+            //exchange();
         };
         call();
       }, []);

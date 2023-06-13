@@ -138,13 +138,13 @@ function Profile() {
             </ul>
             <ul className="social-media socialwhite">
               <li className="colorchangebg_2">
-                <a target="_blank" href="#">
+                <a target="_blank" href="https://wa.link/37tgon">
                   <img alt="whatsapp" src={Whatsapp} />
                   <span>WhatsApp</span>
                 </a>
               </li>
               <li className="colorchangebg_2">
-                <a target="_blank" href="#">
+                <a target="_blank" href="https://msng.link/o/?fairbets_co=tg">
                   <img alt="telegram" src={Telegram} />
                   <span>Telegram</span>
                 </a>

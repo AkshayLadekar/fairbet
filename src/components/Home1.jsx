@@ -26,6 +26,7 @@ import Pcd from "../images/pcd.png";
 import Footer1 from "./Footer1";
 import Leaf from "../images/new-home-images/leaf.png";
 import Ez from "../images/new-home-images/ez.png";
+import Login from "./Login";
 import { Api } from "../Api";
 
 function Home1() {
@@ -35,6 +36,7 @@ function Home1() {
   const [iframeVisible, setIframeVisible] = useState(false);
   const [topGame1, setTopGame1] = useState([]);
   const navigate = useNavigate();
+  const [modalShowLogin, setModalShowLogin] = useState(false);
 
   const navigateToSatta = () => {
     navigate("/satta");
@@ -97,6 +99,11 @@ function Home1() {
   return (
     <>
       <Header1 login={login} />
+      <Login
+                        show={modalShowLogin}
+                        onHide={() => setModalShowLogin(false)}
+                        close={() => setModalShowLogin(false)}
+                      />
       <section id="testimonials" className="testimonials secpd">
         <div className="container pad00">
           <div className="row justify-content-center">
@@ -174,12 +181,12 @@ function Home1() {
                   <div className="col-6 crvimg ">
                     <div
                       className="member-img"
-                      onBlur={() => {
-                        setLogin(false);
-                      }}
-                      onClick={() => {
-                        setLogin(true);
-                        handleImageClick();
+                      // onBlur={() => {
+                      //   //setLogin(false);
+                      // }}
+                      onClick={() =>{ 
+                        setModalShowLogin(true)
+                        //handleImageClick();
                       }}
                     >
                       <img src={Exchange} className="img-fluid" alt="" />
@@ -209,11 +216,9 @@ function Home1() {
                   </div>
                   <div className="col-6 crvimg">
                     <div
-                      onClick={() => {
-                        setLogin(true);
-                      }}
-                      onBlur={() => {
-                        setLogin(false);
+                      onClick={() =>{ 
+                        setModalShowLogin(true)
+                        //handleImageClick();
                       }}
                       className="member-img"
                     >

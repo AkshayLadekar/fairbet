@@ -63,7 +63,7 @@ function Header1(props) {
         console.log(error);
       });
   };
-  
+
   useEffect(() => {
     getWayData();
   }, []);
@@ -123,11 +123,11 @@ function Header1(props) {
         <div className="tpDV">
           <p>
             <a
-              href="/exchange"
+              href={cookies.get("jwt-authorization")?"/exchange":"#"}
               className="tpNv"
               onClick={() => {
                 console.log("=========> clicked",)
-              //setModalShowLogin(true)
+              setModalShowLogin(true)
               }
             }
               style={{
@@ -140,7 +140,10 @@ function Header1(props) {
               Exchange
             </a>
             <a
-              href="/casino"
+            onClick={() =>{ 
+              setModalShowLogin(true)
+            }}
+              href={cookies.get("jwt-authorization")?"/casino":"#"}
               className="tpNv"
               style={{
                 borderBottom:
@@ -153,9 +156,9 @@ function Header1(props) {
             </a>
             <a
               onClick={() =>{ 
-                //setModalShowLogin(true)
+                setModalShowLogin(true)
               }}
-              href="/lottrey"
+              href={cookies.get("jwt-authorization")?"/lottrey":"#"}
               className="tpNv"
               style={{
                 borderBottom:
@@ -168,9 +171,10 @@ function Header1(props) {
             </a>
             <a
               onClick={() =>{ 
-                //setModalShowLogin(true)
+                console.log("========> clicked",modalShowLogin)
+                setModalShowLogin(true)
               }}
-              href="/satta"
+              href={cookies.get("jwt-authorization")?"/satta":"#"}
               className="tpNv"
               style={{
                 borderBottom:

@@ -28,8 +28,8 @@ function Login1(props) {
 
   const navigate = useNavigate();
   const navigateToHome = () => {
-    navigate('/');
-  }
+    navigate("/");
+  };
 
   let setChange = (e) => {
     e.preventDefault();
@@ -60,16 +60,16 @@ function Login1(props) {
       .request(config)
       .then((response) => {
         var data = response.data.data.token;
-        var user=response.data.data.user_id;
-        console.log("======>2",data)
+        var user = response.data.data.user_id;
+        console.log("======>2", data);
         if (response.data.message === "Logged in successfully.") {
-           const set=cookies.set("jwt-authorization",data)
-           const userId=cookies.set("userId",user)
-           console.log("=========>1278",userId)
-           navigateToHome();
-           console.log("=======>set",set)
-          const get =cookies.get("userId")
-          console.log("======>2",get)
+          const set = cookies.set("jwt-authorization", data);
+          const userId = cookies.set("userId", user);
+          console.log("=========>1278", userId);
+          navigateToHome();
+          console.log("=======>set", set);
+          const get = cookies.get("userId");
+          console.log("======>2", get);
           setModalShow3(false);
 
           props.onHide();
@@ -91,8 +91,7 @@ function Login1(props) {
     }
   }, []);
 
-  useEffect(() => {
-  }, [data]);
+  useEffect(() => {}, [data]);
   const handleSubmit = (e) => {
     e.preventDefault();
     setFormErrors(validate(formValues));
@@ -157,41 +156,38 @@ function Login1(props) {
   };
 
   return (
-        <div>
-          <div className="container login">
-            <form onSubmit={handleSubmit}>
-              <label>
-                Username/ Email / Mobile Number:
-                <input
-                  type="text"
-                  className="input-search"
-                  name="username"
-                  onChange={(e) => {
-                    setUserName(e.target.value);
-                  }}
-                />
-              </label>
-              <label >
-                Password:
-                <br />
-                <input
-                  type={passwordVisible ? "text" : "password"}
-                  className="input-search"
-                  name="password"
-                  onChange={(e) => {
-                    setPassword(e.target.value);
-                  }}
-                />
-                <a className="eye" onClick={handleToggle}>
-                  {passwordVisible ? (
-                    <img src={Eyefill} />
-                  ) : (
-                    <img src={Eyeslash} />
-                  )}
-                </a>
-              </label>
-              <p>{formErrors.password}</p>
-              {/* <div className="captchanew">
+    <div>
+      <div className="container login login1">
+        <h2 className="text-center log">LOGIN</h2>
+        <form className="logform" onSubmit={handleSubmit}>
+          <label>
+            Username/ Email / Mobile Number:
+            <input
+              type="text"
+              className="input-search"
+              name="username"
+              onChange={(e) => {
+                setUserName(e.target.value);
+              }}
+            />
+          </label>
+          <label>
+            Password:
+            <br />
+            <input
+              type={passwordVisible ? "text" : "password"}
+              className="input-search"
+              name="password"
+              onChange={(e) => {
+                setPassword(e.target.value);
+              }}
+            />
+            <a className="eye" onClick={handleToggle}>
+              {passwordVisible ? <img src={Eyefill} /> : <img src={Eyeslash} />}
+            </a>
+          </label>
+          <p>{formErrors.password}</p>
+          {/* <div className="captchanew">
                 <input
                   onChange={(e) => {
                     setChange(e);
@@ -210,67 +206,58 @@ function Login1(props) {
                 />
               </div> */}
 
-              <label style={{marginTop: "-1.5rem"}}>Forget Password ?</label>
-              {loginTrue ? (
-                  <></>
-                ) : (
-                  <span className="error">Invalid Credentials</span>
-                )}
-              <div className="btnss">
-                <button
-                  className="loginbtn mb-4"
-                  type="submit"
-                  onClick={() => {
-                    console.log(
-                      "=================",
-                      captchaCode,
-                      inputCaptchaCode
-                    );
-                   
-                       login()
-                      
-                  }}
-                >
-                  LOGIN
-                </button>
-                
-                <button
-                  style={{ marginLeft: "10px" }}
-                  onClick={modalClose}
-                  className="loginbtn"
-                  type="submit"
-                >
-                  SIGN UP
-                </button>
-              </div>
-              {/* <SignUp
+          <label style={{ marginTop: "-1.5rem" }}>Forget Password ?</label>
+          {loginTrue ? (
+            <></>
+          ) : (
+            <span className="error">Invalid Credentials</span>
+          )}
+          <div className="btnss">
+            <button
+              className="loginbtn mb-4"
+              type="submit"
+              onClick={() => {
+                console.log("=================", captchaCode, inputCaptchaCode);
+
+                login();
+              }}
+            >
+              LOGIN
+            </button>
+
+            <button
+              style={{ marginLeft: "10px" }}
+              onClick={modalClose}
+              className="loginbtn"
+              type="submit"
+            >
+              SIGN UP
+            </button>
+          </div>
+          {/* <SignUp
                         show={modalShowSignUp}
                         onHide={() => setModalShowSignUp(false)}
                       /> */}
 
-              <SignUp
-                closeSignUp={() => setModalShow3(false)}
-                show={modalShow3}
-                onHide={handleClose}
-              />
-              <div _ngcontent-c1 className="id-join">
-                <a
-                  _ngcontent-c1
-                  className="msgId"
-                  href="https://wa.link/n8a7gq"
-                >
-                  <img
-                    _ngcontent-c1
-                    alt="whatsapp"
-                    src={Whatsapp}
-                    style={{ height: "28px" }}
-                  />{" "}
-                  Message For ID.
-                </a>
-              </div>
-            </form>
+          <SignUp
+            closeSignUp={() => setModalShow3(false)}
+            show={modalShow3}
+            onHide={handleClose}
+          />
+          <div _ngcontent-c1 className="id-join">
+            <a _ngcontent-c1 className="msgId" href="https://wa.link/n8a7gq">
+              <img
+                _ngcontent-c1
+                alt="whatsapp"
+                src={Whatsapp}
+                style={{ height: "28px" }}
+              />{" "}
+              Message For ID.
+            </a>
           </div>
-        </div>
+        </form>
+      </div>
+    </div>
   );
 }
 export default Login1;

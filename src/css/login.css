@@ -6,6 +6,10 @@ form {
   max-width: 400px;
 }
 
+.logform{
+  margin: auto;
+}
+
 .modal-header {
   font-weight: 600;
 }
@@ -74,6 +78,14 @@ a.msgId {
   color: #fff;
 }
 
+.login1 {
+  margin: 20vh 0;
+}
+
+h2.log {
+  margin-bottom: 25px;
+}
+
 @media only screen and (max-width: 290px) {
   .loginbtn {
     font-size: 10px;
@@ -127,7 +139,6 @@ a.msgId {
   }
 }
 
-
 @media (min-width: 1200px) {
   .row-mr .col {
     padding: 0 70px !important;
@@ -140,8 +151,11 @@ a.msgId {
 
 @media only screen and (max-width: 600px) {
   form {
-    /* margin: 20px auto; */
+    /* margin: auto; */
     padding: 0 20px;
+  }
+  .logform{
+    margin: auto;
   }
 
   label {
