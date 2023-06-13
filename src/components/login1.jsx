@@ -157,9 +157,9 @@ function Login1(props) {
 
   return (
     <div>
-      <div className="container login login1">
-        <h2 className="text-center log">LOGIN</h2>
+      <div className="container-fluid login login1">
         <form className="logform" onSubmit={handleSubmit}>
+          <h2 className="text-center log">LOGIN</h2>
           <label>
             Username/ Email / Mobile Number:
             <input
